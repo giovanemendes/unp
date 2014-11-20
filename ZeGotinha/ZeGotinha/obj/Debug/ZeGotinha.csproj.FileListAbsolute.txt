@@ -1,0 +1,11 @@
+D:\Projetos\C#\unp\ZeGotinha\ZeGotinha\bin\Debug\ZeGotinha.exe.config
+D:\Projetos\C#\unp\ZeGotinha\ZeGotinha\bin\Debug\ZeGotinha.exe
+D:\Projetos\C#\unp\ZeGotinha\ZeGotinha\bin\Debug\ZeGotinha.pdb
+D:\Projetos\C#\unp\ZeGotinha\ZeGotinha\obj\Debug\ZeGotinha.Properties.Resources.resources
+D:\Projetos\C#\unp\ZeGotinha\ZeGotinha\obj\Debug\ZeGotinha.csproj.GenerateResource.Cache
+D:\Projetos\C#\unp\ZeGotinha\ZeGotinha\obj\Debug\ZeGotinha.exe
+D:\Projetos\C#\unp\ZeGotinha\ZeGotinha\obj\Debug\ZeGotinha.pdb
+D:\Projetos\C#\unp\ZeGotinha\ZeGotinha\obj\Debug\ZeGotinha.csprojResolveAssemblyReference.cache
+D:\Projetos\C#\unp\ZeGotinha\ZeGotinha\obj\Debug\ZeGotinha.FrmDoenca.resources
+D:\Projetos\C#\unp\ZeGotinha\ZeGotinha\obj\Debug\ZeGotinha.FrmPrincipal.resources
+D:\Projetos\C#\unp\ZeGotinha\ZeGotinha\obj\Debug\ZeGotinha.FrmMedicamento.resources
