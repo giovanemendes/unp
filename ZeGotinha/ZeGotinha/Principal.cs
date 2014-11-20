@@ -28,5 +28,11 @@ namespace ZeGotinha
             FrmMedicamento frmMedicamento = new FrmMedicamento();
             frmMedicamento.Show();
         }
+
+        private void vacinaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmVacina frmVacina = new FrmVacina();
+            frmVacina.Show();
+        }
     }
 }

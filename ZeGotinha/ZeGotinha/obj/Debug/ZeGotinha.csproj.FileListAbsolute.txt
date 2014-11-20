@@ -9,3 +9,4 @@ D:\Projetos\C#\unp\ZeGotinha\ZeGotinha\obj\Debug\ZeGotinha.csprojResolveAssembly
 D:\Projetos\C#\unp\ZeGotinha\ZeGotinha\obj\Debug\ZeGotinha.FrmDoenca.resources
 D:\Projetos\C#\unp\ZeGotinha\ZeGotinha\obj\Debug\ZeGotinha.FrmPrincipal.resources
 D:\Projetos\C#\unp\ZeGotinha\ZeGotinha\obj\Debug\ZeGotinha.FrmMedicamento.resources
+D:\Projetos\C#\unp\ZeGotinha\ZeGotinha\obj\Debug\ZeGotinha.FrmVacina.resources

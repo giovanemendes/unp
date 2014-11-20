@@ -32,6 +32,7 @@
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.doençaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.medicamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vacinaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,7 +50,8 @@
             // 
             this.cadastroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.doençaToolStripMenuItem,
-            this.medicamentoToolStripMenuItem});
+            this.medicamentoToolStripMenuItem,
+            this.vacinaToolStripMenuItem});
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
             this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.cadastroToolStripMenuItem.Text = "Cadastro";
@@ -67,6 +69,13 @@
             this.medicamentoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.medicamentoToolStripMenuItem.Text = "Medicamento";
             this.medicamentoToolStripMenuItem.Click += new System.EventHandler(this.medicamentoToolStripMenuItem_Click);
+            // 
+            // vacinaToolStripMenuItem
+            // 
+            this.vacinaToolStripMenuItem.Name = "vacinaToolStripMenuItem";
+            this.vacinaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.vacinaToolStripMenuItem.Text = "Vacina";
+            this.vacinaToolStripMenuItem.Click += new System.EventHandler(this.vacinaToolStripMenuItem_Click);
             // 
             // FrmPrincipal
             // 
@@ -91,5 +100,6 @@
         private System.Windows.Forms.ToolStripMenuItem cadastroToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem doençaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem medicamentoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem vacinaToolStripMenuItem;
     }
 }
