@@ -34,6 +34,7 @@
             this.medicamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vacinaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.médicoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.postoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,7 +54,8 @@
             this.doençaToolStripMenuItem,
             this.medicamentoToolStripMenuItem,
             this.vacinaToolStripMenuItem,
-            this.médicoToolStripMenuItem});
+            this.médicoToolStripMenuItem,
+            this.postoToolStripMenuItem});
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
             this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.cadastroToolStripMenuItem.Text = "Cadastro";
@@ -86,6 +88,13 @@
             this.médicoToolStripMenuItem.Text = "Médico";
             this.médicoToolStripMenuItem.Click += new System.EventHandler(this.médicoToolStripMenuItem_Click);
             // 
+            // postoToolStripMenuItem
+            // 
+            this.postoToolStripMenuItem.Name = "postoToolStripMenuItem";
+            this.postoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.postoToolStripMenuItem.Text = "Posto";
+            this.postoToolStripMenuItem.Click += new System.EventHandler(this.postoToolStripMenuItem_Click);
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -111,5 +120,6 @@
         private System.Windows.Forms.ToolStripMenuItem medicamentoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem vacinaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem médicoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem postoToolStripMenuItem;
     }
 }

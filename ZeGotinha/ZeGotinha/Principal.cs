@@ -40,5 +40,11 @@ namespace ZeGotinha
             FrmMedico frmMedico = new FrmMedico();
             frmMedico.Show();
         }
+
+        private void postoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmPosto frmPosto = new FrmPosto();
+            frmPosto.Show();
+        }
     }
 }
