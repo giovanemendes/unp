@@ -56,6 +56,12 @@
     <Compile Include="FrmMedicamento.Designer.cs">
       <DependentUpon>FrmMedicamento.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmMedico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMedico.Designer.cs">
+      <DependentUpon>FrmMedico.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmVacina.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMedicamento.resx">
       <DependentUpon>FrmMedicamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMedico.resx">
+      <DependentUpon>FrmMedico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmVacina.resx">
       <DependentUpon>FrmVacina.cs</DependentUpon>

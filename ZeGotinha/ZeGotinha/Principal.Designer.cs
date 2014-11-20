@@ -33,6 +33,7 @@
             this.doençaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.medicamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vacinaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.médicoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,7 +52,8 @@
             this.cadastroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.doençaToolStripMenuItem,
             this.medicamentoToolStripMenuItem,
-            this.vacinaToolStripMenuItem});
+            this.vacinaToolStripMenuItem,
+            this.médicoToolStripMenuItem});
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
             this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.cadastroToolStripMenuItem.Text = "Cadastro";
@@ -77,6 +79,13 @@
             this.vacinaToolStripMenuItem.Text = "Vacina";
             this.vacinaToolStripMenuItem.Click += new System.EventHandler(this.vacinaToolStripMenuItem_Click);
             // 
+            // médicoToolStripMenuItem
+            // 
+            this.médicoToolStripMenuItem.Name = "médicoToolStripMenuItem";
+            this.médicoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.médicoToolStripMenuItem.Text = "Médico";
+            this.médicoToolStripMenuItem.Click += new System.EventHandler(this.médicoToolStripMenuItem_Click);
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -101,5 +110,6 @@
         private System.Windows.Forms.ToolStripMenuItem doençaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem medicamentoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem vacinaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem médicoToolStripMenuItem;
     }
 }
