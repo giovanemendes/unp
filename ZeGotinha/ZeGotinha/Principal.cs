@@ -20,31 +20,49 @@ namespace ZeGotinha
         private void doençaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmDoenca frmDoenca = new FrmDoenca();
-            frmDoenca.Show();
+            frmDoenca.ShowDialog();
         }
 
         private void medicamentoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmMedicamento frmMedicamento = new FrmMedicamento();
-            frmMedicamento.Show();
+            frmMedicamento.ShowDialog();
         }
 
         private void vacinaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmVacina frmVacina = new FrmVacina();
-            frmVacina.Show();
+            frmVacina.ShowDialog();
         }
 
         private void médicoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmMedico frmMedico = new FrmMedico();
-            frmMedico.Show();
+            frmMedico.ShowDialog();
         }
 
         private void postoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmPosto frmPosto = new FrmPosto();
-            frmPosto.Show();
+            frmPosto.ShowDialog();
+        }
+
+        private void princípioAtivoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmPrincipioAtivo frmPrincipioAtivo = new FrmPrincipioAtivo();
+            frmPrincipioAtivo.ShowDialog();
+        }
+
+        private void cronogramaVacinaçãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmVacinaCronograma frmVacinaCronograma = new FrmVacinaCronograma();
+            frmVacinaCronograma.ShowDialog();
+        }
+
+        private void elementoNaturalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmElementoNatural frmElementoNatural = new FrmElementoNatural();
+            frmElementoNatural.ShowDialog();
         }
     }
 }

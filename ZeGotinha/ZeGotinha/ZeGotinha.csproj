@@ -50,6 +50,12 @@
     <Compile Include="FrmDoenca.Designer.cs">
       <DependentUpon>FrmDoenca.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmElementoNatural.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmElementoNatural.Designer.cs">
+      <DependentUpon>FrmElementoNatural.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMedicamento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,11 +74,23 @@
     <Compile Include="FrmPosto.Designer.cs">
       <DependentUpon>FrmPosto.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmPrincipioAtivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrincipioAtivo.Designer.cs">
+      <DependentUpon>FrmPrincipioAtivo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmVacina.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmVacina.Designer.cs">
       <DependentUpon>FrmVacina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVacinaCronograma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVacinaCronograma.Designer.cs">
+      <DependentUpon>FrmVacinaCronograma.cs</DependentUpon>
     </Compile>
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
@@ -82,6 +100,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ZeGotinhaDataSet.cs">
+      <DependentUpon>ZeGotinhaDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ZeGotinhaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -89,6 +111,9 @@
     </Compile>
     <EmbeddedResource Include="FrmDoenca.resx">
       <DependentUpon>FrmDoenca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmElementoNatural.resx">
+      <DependentUpon>FrmElementoNatural.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMedicamento.resx">
       <DependentUpon>FrmMedicamento.cs</DependentUpon>
@@ -99,8 +124,14 @@
     <EmbeddedResource Include="FrmPosto.resx">
       <DependentUpon>FrmPosto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrincipioAtivo.resx">
+      <DependentUpon>FrmPrincipioAtivo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmVacina.resx">
       <DependentUpon>FrmVacina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVacinaCronograma.resx">
+      <DependentUpon>FrmVacinaCronograma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
@@ -137,6 +168,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Imagens\zegotinha.jpg" />
+    <Content Include="Imagens\ze_gotinha_familia.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

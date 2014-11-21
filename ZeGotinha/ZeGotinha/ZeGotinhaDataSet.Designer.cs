@@ -5672,10 +5672,10 @@ namespace ZeGotinha {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public vacinacronogramaRow AddvacinacronogramaRow(long idvacinacronograma, string descricao, string tipo, long valorinicial, long valorfinal, vacinaRow parentvacinaRowByFK_vacinacronograma_vacina, vacinacronogramaRow parentvacinacronogramaRowByFK_vacinacronograma_vacinacronograma) {
+            public vacinacronogramaRow AddvacinacronogramaRow(string descricao, string tipo, long valorinicial, long valorfinal, vacinaRow parentvacinaRowByFK_vacinacronograma_vacina, vacinacronogramaRow parentvacinacronogramaRowByFK_vacinacronograma_vacinacronograma) {
                 vacinacronogramaRow rowvacinacronogramaRow = ((vacinacronogramaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        idvacinacronograma,
+                        null,
                         descricao,
                         tipo,
                         valorinicial,
@@ -5745,6 +5745,7 @@ namespace ZeGotinha {
                 base.Columns.Add(this.columnidanterior);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnidvacinacronograma}, true));
+                this.columnidvacinacronograma.AutoIncrement = true;
                 this.columnidvacinacronograma.AllowDBNull = false;
                 this.columnidvacinacronograma.Unique = true;
                 this.columndescricao.AllowDBNull = false;
@@ -13874,10 +13875,9 @@ SELECT idprincipioativo, nomeprincipioativo FROM principioativo WHERE (idprincip
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idanterior", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idanterior", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[vacinacronograma] ([idvacinacronograma], [descricao], [tipo], [valorinicial], [valorfinal], [idvacina], [idanterior]) VALUES (@idvacinacronograma, @descricao, @tipo, @valorinicial, @valorfinal, @idvacina, @idanterior);
-SELECT idvacinacronograma, descricao, tipo, valorinicial, valorfinal, idvacina, idanterior FROM vacinacronograma WHERE (idvacinacronograma = @idvacinacronograma)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[vacinacronograma] ([descricao], [tipo], [valorinicial], [valorfinal], [idvacina], [idanterior]) VALUES (@descricao, @tipo, @valorinicial, @valorfinal, @idvacina, @idanterior);
+SELECT idvacinacronograma, descricao, tipo, valorinicial, valorfinal, idvacina, idanterior FROM vacinacronograma WHERE (idvacinacronograma = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idvacinacronograma", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idvacinacronograma", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@descricao", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "descricao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tipo", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tipo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@valorinicial", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "valorinicial", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -13886,10 +13886,9 @@ SELECT idvacinacronograma, descricao, tipo, valorinicial, valorfinal, idvacina, 
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idanterior", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idanterior", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[vacinacronograma] SET [idvacinacronograma] = @idvacinacronograma, [descricao] = @descricao, [tipo] = @tipo, [valorinicial] = @valorinicial, [valorfinal] = @valorfinal, [idvacina] = @idvacina, [idanterior] = @idanterior WHERE (([idvacinacronograma] = @Original_idvacinacronograma) AND ([descricao] = @Original_descricao) AND ([tipo] = @Original_tipo) AND ([valorinicial] = @Original_valorinicial) AND ([valorfinal] = @Original_valorfinal) AND ([idvacina] = @Original_idvacina) AND ((@IsNull_idanterior = 1 AND [idanterior] IS NULL) OR ([idanterior] = @Original_idanterior)));
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[vacinacronograma] SET [descricao] = @descricao, [tipo] = @tipo, [valorinicial] = @valorinicial, [valorfinal] = @valorfinal, [idvacina] = @idvacina, [idanterior] = @idanterior WHERE (([idvacinacronograma] = @Original_idvacinacronograma) AND ([descricao] = @Original_descricao) AND ([tipo] = @Original_tipo) AND ([valorinicial] = @Original_valorinicial) AND ([valorfinal] = @Original_valorfinal) AND ([idvacina] = @Original_idvacina) AND ((@IsNull_idanterior = 1 AND [idanterior] IS NULL) OR ([idanterior] = @Original_idanterior)));
 SELECT idvacinacronograma, descricao, tipo, valorinicial, valorfinal, idvacina, idanterior FROM vacinacronograma WHERE (idvacinacronograma = @idvacinacronograma)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idvacinacronograma", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idvacinacronograma", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@descricao", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "descricao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tipo", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tipo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@valorinicial", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "valorinicial", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -13904,6 +13903,7 @@ SELECT idvacinacronograma, descricao, tipo, valorinicial, valorfinal, idvacina, 
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idvacina", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idvacina", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_idanterior", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idanterior", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idanterior", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idanterior", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idvacinacronograma", global::System.Data.SqlDbType.BigInt, 8, global::System.Data.ParameterDirection.Input, 0, 0, "idvacinacronograma", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13916,12 +13916,16 @@ SELECT idvacinacronograma, descricao, tipo, valorinicial, valorfinal, idvacina, 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT idvacinacronograma, descricao, tipo, valorinicial, valorfinal, idvacina, i" +
                 "danterior FROM dbo.vacinacronograma";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT * FROM dbo.vacinacronograma";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13946,6 +13950,19 @@ SELECT idvacinacronograma, descricao, tipo, valorinicial, valorfinal, idvacina, 
             ZeGotinhaDataSet.vacinacronogramaDataTable dataTable = new ZeGotinhaDataSet.vacinacronogramaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int AllVacinaCronograma(ZeGotinhaDataSet.vacinacronogramaDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -14026,28 +14043,27 @@ SELECT idvacinacronograma, descricao, tipo, valorinicial, valorfinal, idvacina, 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(long idvacinacronograma, string descricao, string tipo, long valorinicial, long valorfinal, long idvacina, global::System.Nullable<long> idanterior) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((long)(idvacinacronograma));
+        public virtual int Insert(string descricao, string tipo, long valorinicial, long valorfinal, long idvacina, global::System.Nullable<long> idanterior) {
             if ((descricao == null)) {
                 throw new global::System.ArgumentNullException("descricao");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(descricao));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(descricao));
             }
             if ((tipo == null)) {
                 throw new global::System.ArgumentNullException("tipo");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(tipo));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(tipo));
             }
-            this.Adapter.InsertCommand.Parameters[3].Value = ((long)(valorinicial));
-            this.Adapter.InsertCommand.Parameters[4].Value = ((long)(valorfinal));
-            this.Adapter.InsertCommand.Parameters[5].Value = ((long)(idvacina));
+            this.Adapter.InsertCommand.Parameters[2].Value = ((long)(valorinicial));
+            this.Adapter.InsertCommand.Parameters[3].Value = ((long)(valorfinal));
+            this.Adapter.InsertCommand.Parameters[4].Value = ((long)(idvacina));
             if ((idanterior.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((long)(idanterior.Value));
+                this.Adapter.InsertCommand.Parameters[5].Value = ((long)(idanterior.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -14069,53 +14085,53 @@ SELECT idvacinacronograma, descricao, tipo, valorinicial, valorfinal, idvacina, 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(long idvacinacronograma, string descricao, string tipo, long valorinicial, long valorfinal, long idvacina, global::System.Nullable<long> idanterior, long Original_idvacinacronograma, string Original_descricao, string Original_tipo, long Original_valorinicial, long Original_valorfinal, long Original_idvacina, global::System.Nullable<long> Original_idanterior) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((long)(idvacinacronograma));
+        public virtual int Update(string descricao, string tipo, long valorinicial, long valorfinal, long idvacina, global::System.Nullable<long> idanterior, long Original_idvacinacronograma, string Original_descricao, string Original_tipo, long Original_valorinicial, long Original_valorfinal, long Original_idvacina, global::System.Nullable<long> Original_idanterior, long idvacinacronograma) {
             if ((descricao == null)) {
                 throw new global::System.ArgumentNullException("descricao");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(descricao));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(descricao));
             }
             if ((tipo == null)) {
                 throw new global::System.ArgumentNullException("tipo");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(tipo));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(tipo));
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((long)(valorinicial));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((long)(valorfinal));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((long)(idvacina));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((long)(valorinicial));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((long)(valorfinal));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((long)(idvacina));
             if ((idanterior.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((long)(idanterior.Value));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((long)(idanterior.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((long)(Original_idvacinacronograma));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((long)(Original_idvacinacronograma));
             if ((Original_descricao == null)) {
                 throw new global::System.ArgumentNullException("Original_descricao");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_descricao));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_descricao));
             }
             if ((Original_tipo == null)) {
                 throw new global::System.ArgumentNullException("Original_tipo");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_tipo));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_tipo));
             }
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((long)(Original_valorinicial));
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((long)(Original_valorfinal));
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((long)(Original_idvacina));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((long)(Original_valorinicial));
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((long)(Original_valorfinal));
+            this.Adapter.UpdateCommand.Parameters[11].Value = ((long)(Original_idvacina));
             if ((Original_idanterior.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((long)(Original_idanterior.Value));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((long)(Original_idanterior.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
+            this.Adapter.UpdateCommand.Parameters[14].Value = ((long)(idvacinacronograma));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -14137,7 +14153,7 @@ SELECT idvacinacronograma, descricao, tipo, valorinicial, valorfinal, idvacina, 
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(string descricao, string tipo, long valorinicial, long valorfinal, long idvacina, global::System.Nullable<long> idanterior, long Original_idvacinacronograma, string Original_descricao, string Original_tipo, long Original_valorinicial, long Original_valorfinal, long Original_idvacina, global::System.Nullable<long> Original_idanterior) {
-            return this.Update(Original_idvacinacronograma, descricao, tipo, valorinicial, valorfinal, idvacina, idanterior, Original_idvacinacronograma, Original_descricao, Original_tipo, Original_valorinicial, Original_valorfinal, Original_idvacina, Original_idanterior);
+            return this.Update(descricao, tipo, valorinicial, valorfinal, idvacina, idanterior, Original_idvacinacronograma, Original_descricao, Original_tipo, Original_valorinicial, Original_valorfinal, Original_idvacina, Original_idanterior, Original_idvacinacronograma);
         }
     }
     

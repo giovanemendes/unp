@@ -55,6 +55,10 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.iddoencaTextBox = new System.Windows.Forms.TextBox();
             this.nomedoencaTextBox = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.comboBoxTipoPesquisa = new System.Windows.Forms.ComboBox();
+            this.textBoxPesquisa = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             iddoencaLabel = new System.Windows.Forms.Label();
             nomedoencaLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.zeGotinhaDataSet)).BeginInit();
@@ -63,6 +67,7 @@
             this.doencaBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.doencaDataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // iddoencaLabel
@@ -139,7 +144,7 @@
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
             this.doencaBindingNavigatorSaveItem});
-            this.doencaBindingNavigator.Location = new System.Drawing.Point(12, 94);
+            this.doencaBindingNavigator.Location = new System.Drawing.Point(13, 152);
             this.doencaBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.doencaBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.doencaBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -253,9 +258,9 @@
             this.dataGridViewTextBoxColumn2});
             this.doencaDataGridView.DataSource = this.doencaBindingSource;
             this.doencaDataGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.doencaDataGridView.Location = new System.Drawing.Point(0, 122);
+            this.doencaDataGridView.Location = new System.Drawing.Point(0, 180);
             this.doencaDataGridView.Name = "doencaDataGridView";
-            this.doencaDataGridView.Size = new System.Drawing.Size(348, 220);
+            this.doencaDataGridView.Size = new System.Drawing.Size(525, 220);
             this.doencaDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -278,9 +283,9 @@
             this.groupBox1.Controls.Add(this.iddoencaTextBox);
             this.groupBox1.Controls.Add(nomedoencaLabel);
             this.groupBox1.Controls.Add(this.nomedoencaTextBox);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(12, 68);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(324, 81);
+            this.groupBox1.Size = new System.Drawing.Size(501, 81);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados Doença";
@@ -299,14 +304,55 @@
             this.nomedoencaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.doencaBindingSource, "nomedoenca", true));
             this.nomedoencaTextBox.Location = new System.Drawing.Point(84, 45);
             this.nomedoencaTextBox.Name = "nomedoencaTextBox";
-            this.nomedoencaTextBox.Size = new System.Drawing.Size(226, 20);
+            this.nomedoencaTextBox.Size = new System.Drawing.Size(330, 20);
             this.nomedoencaTextBox.TabIndex = 3;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.textBoxPesquisa);
+            this.groupBox2.Controls.Add(this.comboBoxTipoPesquisa);
+            this.groupBox2.Location = new System.Drawing.Point(12, 12);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(501, 50);
+            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Pesquisa";
+            // 
+            // comboBoxTipoPesquisa
+            // 
+            this.comboBoxTipoPesquisa.FormattingEnabled = true;
+            this.comboBoxTipoPesquisa.Items.AddRange(new object[] {
+            "Código",
+            "Descrição"});
+            this.comboBoxTipoPesquisa.Location = new System.Drawing.Point(6, 19);
+            this.comboBoxTipoPesquisa.Name = "comboBoxTipoPesquisa";
+            this.comboBoxTipoPesquisa.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxTipoPesquisa.TabIndex = 0;
+            // 
+            // textBoxPesquisa
+            // 
+            this.textBoxPesquisa.Location = new System.Drawing.Point(133, 19);
+            this.textBoxPesquisa.Name = "textBoxPesquisa";
+            this.textBoxPesquisa.Size = new System.Drawing.Size(281, 20);
+            this.textBoxPesquisa.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(420, 16);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Pesquisar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // FrmDoenca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(348, 342);
+            this.ClientSize = new System.Drawing.Size(525, 400);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.doencaDataGridView);
             this.Controls.Add(this.doencaBindingNavigator);
@@ -314,6 +360,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro Doenças";
             this.Load += new System.EventHandler(this.FrmDoenca_Load);
+            this.Shown += new System.EventHandler(this.FrmDoenca_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.zeGotinhaDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.doencaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.doencaBindingNavigator)).EndInit();
@@ -322,6 +369,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.doencaDataGridView)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -352,5 +401,9 @@
         private System.Windows.Forms.TextBox nomedoencaTextBox;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBoxPesquisa;
+        private System.Windows.Forms.ComboBox comboBoxTipoPesquisa;
     }
 }

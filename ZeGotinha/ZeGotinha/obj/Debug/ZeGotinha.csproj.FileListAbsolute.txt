@@ -12,3 +12,6 @@ D:\Projetos\C#\unp\ZeGotinha\ZeGotinha\obj\Debug\ZeGotinha.FrmMedicamento.resour
 D:\Projetos\C#\unp\ZeGotinha\ZeGotinha\obj\Debug\ZeGotinha.FrmVacina.resources
 D:\Projetos\C#\unp\ZeGotinha\ZeGotinha\obj\Debug\ZeGotinha.FrmMedico.resources
 D:\Projetos\C#\unp\ZeGotinha\ZeGotinha\obj\Debug\ZeGotinha.FrmPosto.resources
+D:\Projetos\C#\unp\ZeGotinha\ZeGotinha\obj\Debug\ZeGotinha.FrmPrincipioAtivo.resources
+D:\Projetos\C#\unp\ZeGotinha\ZeGotinha\obj\Debug\ZeGotinha.FrmVacinaCronograma.resources
+D:\Projetos\C#\unp\ZeGotinha\ZeGotinha\obj\Debug\ZeGotinha.FrmElementoNatural.resources
