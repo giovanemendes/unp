@@ -63,11 +63,29 @@ namespace ZeGotinha
             frmPrincipioAtivo.ShowDialog();
 
             this.principioativoTableAdapter.Fill(this.zeGotinhaDataSet.principioativo);
+            this.principioativoBindingSource.MoveLast();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void fKmedicamentocomposicaomedicamentoBindingSource_PositionChanged(object sender, EventArgs e)
         {
-            
+            carregarGridPrincipioAtivo();
+        }
+
+        private void carregarGridPrincipioAtivo() 
+        {
+            try
+            {
+                DataRowView linha = (DataRowView)fKmedicamentocomposicaomedicamentoBindingSource.Current;
+                this.principioativoBindingSource.Filter = "idprincipioativo = " + linha["idprincipioativo"].ToString();
+            }catch(Exception ex)
+            {
+
+            }
+        }
+
+        private void fKmedicamentocomposicaomedicamentoBindingSource_ListChanged(object sender, ListChangedEventArgs e)
+        {
+            carregarGridPrincipioAtivo();
         }
     }
 }

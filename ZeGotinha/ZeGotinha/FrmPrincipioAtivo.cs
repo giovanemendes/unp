@@ -29,7 +29,6 @@ namespace ZeGotinha
         {
             // TODO: This line of code loads data into the 'zeGotinhaDataSet.principioativo' table. You can move, or remove it, as needed.
             this.principioativoTableAdapter.Fill(this.zeGotinhaDataSet.principioativo);
-
         }
     }
 }
