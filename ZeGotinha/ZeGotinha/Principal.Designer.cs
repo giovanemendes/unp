@@ -37,9 +37,11 @@
             this.médicoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.postoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.princípioAtivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cronogramaVacinaçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.elementoNaturalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.composiçãoMedicamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pacienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -64,7 +66,9 @@
             this.postoToolStripMenuItem,
             this.princípioAtivoToolStripMenuItem,
             this.cronogramaVacinaçãoToolStripMenuItem,
-            this.elementoNaturalToolStripMenuItem});
+            this.elementoNaturalToolStripMenuItem,
+            this.composiçãoMedicamentoToolStripMenuItem,
+            this.pacienteToolStripMenuItem});
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
             this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.cadastroToolStripMenuItem.Text = "Cadastro";
@@ -72,44 +76,65 @@
             // doençaToolStripMenuItem
             // 
             this.doençaToolStripMenuItem.Name = "doençaToolStripMenuItem";
-            this.doençaToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.doençaToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
             this.doençaToolStripMenuItem.Text = "Doença";
             this.doençaToolStripMenuItem.Click += new System.EventHandler(this.doençaToolStripMenuItem_Click);
             // 
             // medicamentoToolStripMenuItem
             // 
             this.medicamentoToolStripMenuItem.Name = "medicamentoToolStripMenuItem";
-            this.medicamentoToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.medicamentoToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
             this.medicamentoToolStripMenuItem.Text = "Medicamento";
             this.medicamentoToolStripMenuItem.Click += new System.EventHandler(this.medicamentoToolStripMenuItem_Click);
             // 
             // vacinaToolStripMenuItem
             // 
             this.vacinaToolStripMenuItem.Name = "vacinaToolStripMenuItem";
-            this.vacinaToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.vacinaToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
             this.vacinaToolStripMenuItem.Text = "Vacina";
             this.vacinaToolStripMenuItem.Click += new System.EventHandler(this.vacinaToolStripMenuItem_Click);
             // 
             // médicoToolStripMenuItem
             // 
             this.médicoToolStripMenuItem.Name = "médicoToolStripMenuItem";
-            this.médicoToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.médicoToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
             this.médicoToolStripMenuItem.Text = "Médico";
             this.médicoToolStripMenuItem.Click += new System.EventHandler(this.médicoToolStripMenuItem_Click);
             // 
             // postoToolStripMenuItem
             // 
             this.postoToolStripMenuItem.Name = "postoToolStripMenuItem";
-            this.postoToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.postoToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
             this.postoToolStripMenuItem.Text = "Posto";
             this.postoToolStripMenuItem.Click += new System.EventHandler(this.postoToolStripMenuItem_Click);
             // 
             // princípioAtivoToolStripMenuItem
             // 
             this.princípioAtivoToolStripMenuItem.Name = "princípioAtivoToolStripMenuItem";
-            this.princípioAtivoToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.princípioAtivoToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
             this.princípioAtivoToolStripMenuItem.Text = "Princípio Ativo";
             this.princípioAtivoToolStripMenuItem.Click += new System.EventHandler(this.princípioAtivoToolStripMenuItem_Click);
+            // 
+            // cronogramaVacinaçãoToolStripMenuItem
+            // 
+            this.cronogramaVacinaçãoToolStripMenuItem.Name = "cronogramaVacinaçãoToolStripMenuItem";
+            this.cronogramaVacinaçãoToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.cronogramaVacinaçãoToolStripMenuItem.Text = "Cronograma Vacinação";
+            this.cronogramaVacinaçãoToolStripMenuItem.Click += new System.EventHandler(this.cronogramaVacinaçãoToolStripMenuItem_Click);
+            // 
+            // elementoNaturalToolStripMenuItem
+            // 
+            this.elementoNaturalToolStripMenuItem.Name = "elementoNaturalToolStripMenuItem";
+            this.elementoNaturalToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.elementoNaturalToolStripMenuItem.Text = "Elemento Natural";
+            this.elementoNaturalToolStripMenuItem.Click += new System.EventHandler(this.elementoNaturalToolStripMenuItem_Click);
+            // 
+            // composiçãoMedicamentoToolStripMenuItem
+            // 
+            this.composiçãoMedicamentoToolStripMenuItem.Name = "composiçãoMedicamentoToolStripMenuItem";
+            this.composiçãoMedicamentoToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.composiçãoMedicamentoToolStripMenuItem.Text = "Composição Medicamento";
+            this.composiçãoMedicamentoToolStripMenuItem.Click += new System.EventHandler(this.composiçãoMedicamentoToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
@@ -123,19 +148,12 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // cronogramaVacinaçãoToolStripMenuItem
+            // pacienteToolStripMenuItem
             // 
-            this.cronogramaVacinaçãoToolStripMenuItem.Name = "cronogramaVacinaçãoToolStripMenuItem";
-            this.cronogramaVacinaçãoToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
-            this.cronogramaVacinaçãoToolStripMenuItem.Text = "Cronograma Vacinação";
-            this.cronogramaVacinaçãoToolStripMenuItem.Click += new System.EventHandler(this.cronogramaVacinaçãoToolStripMenuItem_Click);
-            // 
-            // elementoNaturalToolStripMenuItem
-            // 
-            this.elementoNaturalToolStripMenuItem.Name = "elementoNaturalToolStripMenuItem";
-            this.elementoNaturalToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
-            this.elementoNaturalToolStripMenuItem.Text = "Elemento Natural";
-            this.elementoNaturalToolStripMenuItem.Click += new System.EventHandler(this.elementoNaturalToolStripMenuItem_Click);
+            this.pacienteToolStripMenuItem.Name = "pacienteToolStripMenuItem";
+            this.pacienteToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.pacienteToolStripMenuItem.Text = "Paciente";
+            this.pacienteToolStripMenuItem.Click += new System.EventHandler(this.pacienteToolStripMenuItem_Click);
             // 
             // FrmPrincipal
             // 
@@ -169,5 +187,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem cronogramaVacinaçãoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem elementoNaturalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem composiçãoMedicamentoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pacienteToolStripMenuItem;
     }
 }

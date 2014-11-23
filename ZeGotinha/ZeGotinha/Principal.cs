@@ -64,5 +64,17 @@ namespace ZeGotinha
             FrmElementoNatural frmElementoNatural = new FrmElementoNatural();
             frmElementoNatural.ShowDialog();
         }
+
+        private void composiçãoMedicamentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmComposicaoMedicamento frmComposicaoMedicamento = new FrmComposicaoMedicamento();
+            frmComposicaoMedicamento.ShowDialog();
+        }
+
+        private void pacienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmPaciente frmPaciente = new FrmPaciente();
+            frmPaciente.ShowDialog();
+        }
     }
 }

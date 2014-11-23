@@ -35,12 +35,15 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.idprincipioativoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeprincipioativoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.principioativoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.zeGotinhaDataSet = new ZeGotinha.ZeGotinhaDataSet();
             this.button3 = new System.Windows.Forms.Button();
             this.medicamentoDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.medicamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.zeGotinhaDataSet = new ZeGotinha.ZeGotinhaDataSet();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.idmedicamentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,7 +65,6 @@
             this.medicamentoBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.idmedicamentoTextBox = new System.Windows.Forms.TextBox();
             this.nomemedicamentoTextBox = new System.Windows.Forms.TextBox();
-            this.principioativoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.medicamentocomposicaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.medicamentoTableAdapter = new ZeGotinha.ZeGotinhaDataSetTableAdapters.medicamentoTableAdapter();
             this.tableAdapterManager = new ZeGotinha.ZeGotinhaDataSetTableAdapters.TableAdapterManager();
@@ -72,22 +74,20 @@
             this.comboBoxTipoPesquisa = new System.Windows.Forms.ComboBox();
             this.medicamentocomposicaoTableAdapter = new ZeGotinha.ZeGotinhaDataSetTableAdapters.medicamentocomposicaoTableAdapter();
             this.principioativoTableAdapter = new ZeGotinha.ZeGotinhaDataSetTableAdapters.principioativoTableAdapter();
-            this.idprincipioativoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomeprincipioativoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             idmedicamentoLabel = new System.Windows.Forms.Label();
             nomemedicamentoLabel = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.principioativoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zeGotinhaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.medicamentoDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.medicamentoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zeGotinhaDataSet)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKmedicamentocomposicaomedicamentoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.medicamentoBindingNavigator)).BeginInit();
             this.medicamentoBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.principioativoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.medicamentocomposicaoBindingSource)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -152,6 +152,29 @@
             this.dataGridView2.Size = new System.Drawing.Size(348, 136);
             this.dataGridView2.TabIndex = 6;
             // 
+            // idprincipioativoDataGridViewTextBoxColumn1
+            // 
+            this.idprincipioativoDataGridViewTextBoxColumn1.DataPropertyName = "idprincipioativo";
+            this.idprincipioativoDataGridViewTextBoxColumn1.HeaderText = "idprincipioativo";
+            this.idprincipioativoDataGridViewTextBoxColumn1.Name = "idprincipioativoDataGridViewTextBoxColumn1";
+            this.idprincipioativoDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // nomeprincipioativoDataGridViewTextBoxColumn
+            // 
+            this.nomeprincipioativoDataGridViewTextBoxColumn.DataPropertyName = "nomeprincipioativo";
+            this.nomeprincipioativoDataGridViewTextBoxColumn.HeaderText = "nomeprincipioativo";
+            this.nomeprincipioativoDataGridViewTextBoxColumn.Name = "nomeprincipioativoDataGridViewTextBoxColumn";
+            // 
+            // principioativoBindingSource
+            // 
+            this.principioativoBindingSource.DataMember = "principioativo";
+            this.principioativoBindingSource.DataSource = this.zeGotinhaDataSet;
+            // 
+            // zeGotinhaDataSet
+            // 
+            this.zeGotinhaDataSet.DataSetName = "ZeGotinhaDataSet";
+            this.zeGotinhaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(245, 12);
@@ -194,11 +217,6 @@
             // 
             this.medicamentoBindingSource.DataMember = "medicamento";
             this.medicamentoBindingSource.DataSource = this.zeGotinhaDataSet;
-            // 
-            // zeGotinhaDataSet
-            // 
-            this.zeGotinhaDataSet.DataSetName = "ZeGotinhaDataSet";
-            this.zeGotinhaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // groupBox3
             // 
@@ -252,6 +270,7 @@
             this.button2.TabIndex = 4;
             this.button2.Text = "Add Composição";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // medicamentoBindingNavigator
             // 
@@ -395,11 +414,6 @@
             this.nomemedicamentoTextBox.Size = new System.Drawing.Size(253, 20);
             this.nomemedicamentoTextBox.TabIndex = 3;
             // 
-            // principioativoBindingSource
-            // 
-            this.principioativoBindingSource.DataMember = "principioativo";
-            this.principioativoBindingSource.DataSource = this.zeGotinhaDataSet;
-            // 
             // medicamentocomposicaoBindingSource
             // 
             this.medicamentocomposicaoBindingSource.DataMember = "medicamentocomposicao";
@@ -479,19 +493,6 @@
             // 
             this.principioativoTableAdapter.ClearBeforeFill = true;
             // 
-            // idprincipioativoDataGridViewTextBoxColumn1
-            // 
-            this.idprincipioativoDataGridViewTextBoxColumn1.DataPropertyName = "idprincipioativo";
-            this.idprincipioativoDataGridViewTextBoxColumn1.HeaderText = "idprincipioativo";
-            this.idprincipioativoDataGridViewTextBoxColumn1.Name = "idprincipioativoDataGridViewTextBoxColumn1";
-            this.idprincipioativoDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // nomeprincipioativoDataGridViewTextBoxColumn
-            // 
-            this.nomeprincipioativoDataGridViewTextBoxColumn.DataPropertyName = "nomeprincipioativo";
-            this.nomeprincipioativoDataGridViewTextBoxColumn.HeaderText = "nomeprincipioativo";
-            this.nomeprincipioativoDataGridViewTextBoxColumn.Name = "nomeprincipioativoDataGridViewTextBoxColumn";
-            // 
             // FrmMedicamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -509,16 +510,16 @@
             this.groupBox1.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.principioativoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zeGotinhaDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.medicamentoDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.medicamentoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zeGotinhaDataSet)).EndInit();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKmedicamentocomposicaomedicamentoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.medicamentoBindingNavigator)).EndInit();
             this.medicamentoBindingNavigator.ResumeLayout(false);
             this.medicamentoBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.principioativoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.medicamentocomposicaoBindingSource)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

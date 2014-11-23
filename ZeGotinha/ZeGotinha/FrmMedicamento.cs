@@ -79,13 +79,33 @@ namespace ZeGotinha
                 this.principioativoBindingSource.Filter = "idprincipioativo = " + linha["idprincipioativo"].ToString();
             }catch(Exception ex)
             {
-
+                //MessageBox.Show("Não foi possível selecionar o Princípio Ativo \n" + ex.Message, "Erro");
             }
         }
 
         private void fKmedicamentocomposicaomedicamentoBindingSource_ListChanged(object sender, ListChangedEventArgs e)
         {
             carregarGridPrincipioAtivo();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FrmComposicaoMedicamento frmComposicaoMedicamento = new FrmComposicaoMedicamento();
+            frmComposicaoMedicamento.ShowDialog();
+
+            carregarGridComposicaoMedicamento();
+        }
+
+        public void carregarGridComposicaoMedicamento()
+        {
+            try
+            {
+                this.medicamentocomposicaoBindingSource.Filter = "idprincipioativo > 0";
+            }
+            catch (Exception ex)
+            {
+                //MessageBox.Show("Não foi possível selecionar o Princípio Ativo \n" + ex.Message, "Erro");
+            }
         }
     }
 }

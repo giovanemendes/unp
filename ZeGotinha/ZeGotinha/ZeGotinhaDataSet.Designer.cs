@@ -8542,7 +8542,7 @@ SELECT idalergiamotivo, idelementonatural, idprincipioativo FROM alergiamotivo W
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=BEE;Initial Catalog=ZeGotinha;Integrated Security=True";
+            this._connection.ConnectionString = global::ZeGotinha.Properties.Settings.Default.ZeGotinhaConnection;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8894,7 +8894,7 @@ SELECT idalergiamotivo, idelementonatural, idprincipioativo FROM alergiamotivo W
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=BEE;Initial Catalog=ZeGotinha;Integrated Security=True";
+            this._connection.ConnectionString = global::ZeGotinha.Properties.Settings.Default.ZeGotinhaConnection;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9212,7 +9212,7 @@ SELECT idelementonatural, nomeelementonatural FROM elementonatural WHERE (idelem
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=BEE;Initial Catalog=ZeGotinha;Integrated Security=True";
+            this._connection.ConnectionString = global::ZeGotinha.Properties.Settings.Default.ZeGotinhaConnection;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9530,7 +9530,7 @@ SELECT idmedicamento, nomemedicamento FROM medicamento WHERE (idmedicamento = @i
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=BEE;Initial Catalog=ZeGotinha;Integrated Security=True";
+            this._connection.ConnectionString = global::ZeGotinha.Properties.Settings.Default.ZeGotinhaConnection;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9848,7 +9848,7 @@ SELECT idmedicamento, idprincipioativo FROM medicamentocomposicao WHERE (idmedic
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=BEE;Initial Catalog=ZeGotinha;Integrated Security=True";
+            this._connection.ConnectionString = global::ZeGotinha.Properties.Settings.Default.ZeGotinhaConnection;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10147,7 +10147,7 @@ SELECT idmedicamento, idprincipioativo FROM medicamentocomposicao WHERE (idmedic
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=BEE;Initial Catalog=ZeGotinha;Integrated Security=True";
+            this._connection.ConnectionString = global::ZeGotinha.Properties.Settings.Default.ZeGotinhaConnection;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10501,7 +10501,7 @@ SELECT idpaciente, nomepaciente, sexo, datanascimento, tiposanguineo, fatorsangu
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=BEE;Initial Catalog=ZeGotinha;Integrated Security=True";
+            this._connection.ConnectionString = global::ZeGotinha.Properties.Settings.Default.ZeGotinhaConnection;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10996,7 +10996,7 @@ SELECT idpacientealergia, datadiagnostico, dataalta, observacoes, idpaciente FRO
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=BEE;Initial Catalog=ZeGotinha;Integrated Security=True";
+            this._connection.ConnectionString = global::ZeGotinha.Properties.Settings.Default.ZeGotinhaConnection;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11398,7 +11398,7 @@ SELECT idpacientedoenca, iddoenca, datadoenca, datacura, idpaciente FROM pacient
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=BEE;Initial Catalog=ZeGotinha;Integrated Security=True";
+            this._connection.ConnectionString = global::ZeGotinha.Properties.Settings.Default.ZeGotinhaConnection;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11769,7 +11769,7 @@ SELECT idpacientepeso, datapesagem, peso, idpaciente FROM pacientepeso WHERE (id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=BEE;Initial Catalog=ZeGotinha;Integrated Security=True";
+            this._connection.ConnectionString = global::ZeGotinha.Properties.Settings.Default.ZeGotinhaConnection;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12093,7 +12093,7 @@ SELECT idpacientevacina, idposto, idpaciente, idvacina, datavacina, responsavel 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=BEE;Initial Catalog=ZeGotinha;Integrated Security=True";
+            this._connection.ConnectionString = global::ZeGotinha.Properties.Settings.Default.ZeGotinhaConnection;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12463,7 +12463,7 @@ SELECT idposologia, dataposologia, idmedico, idmedicamento, textoposologia, inte
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=BEE;Initial Catalog=ZeGotinha;Integrated Security=True";
+            this._connection.ConnectionString = global::ZeGotinha.Properties.Settings.Default.ZeGotinhaConnection;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12903,7 +12903,7 @@ SELECT idposto, nomeposto, tipoposto FROM posto WHERE (idposto = @idposto)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=BEE;Initial Catalog=ZeGotinha;Integrated Security=True";
+            this._connection.ConnectionString = global::ZeGotinha.Properties.Settings.Default.ZeGotinhaConnection;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13249,7 +13249,7 @@ SELECT idprincipioativo, nomeprincipioativo FROM principioativo WHERE (idprincip
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=BEE;Initial Catalog=ZeGotinha;Integrated Security=True";
+            this._connection.ConnectionString = global::ZeGotinha.Properties.Settings.Default.ZeGotinhaConnection;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13567,7 +13567,7 @@ SELECT idprincipioativo, nomeprincipioativo FROM principioativo WHERE (idprincip
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=BEE;Initial Catalog=ZeGotinha;Integrated Security=True";
+            this._connection.ConnectionString = global::ZeGotinha.Properties.Settings.Default.ZeGotinhaConnection;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13910,7 +13910,7 @@ SELECT idvacinacronograma, descricao, tipo, valorinicial, valorfinal, idvacina, 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=BEE;Initial Catalog=ZeGotinha;Integrated Security=True";
+            this._connection.ConnectionString = global::ZeGotinha.Properties.Settings.Default.ZeGotinhaConnection;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -14311,7 +14311,7 @@ SELECT idvacina, iddoenca FROM vacinadoenca WHERE (iddoenca = @iddoenca) AND (id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=BEE;Initial Catalog=ZeGotinha;Integrated Security=True";
+            this._connection.ConnectionString = global::ZeGotinha.Properties.Settings.Default.ZeGotinhaConnection;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
