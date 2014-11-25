@@ -43,7 +43,6 @@
             System.Windows.Forms.Label datadiagnosticoLabel;
             System.Windows.Forms.Label idpacientealergiaLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPaciente));
-            this.zeGotinhaDataSet = new ZeGotinha.ZeGotinhaDataSet();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -71,11 +70,7 @@
             this.datadiagnosticoMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.idpacientealergiaTextBox = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.pacientealergiaDataGridView = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.pacienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pacienteTableAdapter = new ZeGotinha.ZeGotinhaDataSetTableAdapters.pacienteTableAdapter();
-            this.tableAdapterManager = new ZeGotinha.ZeGotinhaDataSetTableAdapters.TableAdapterManager();
             this.pacienteBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -90,6 +85,22 @@
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.pacienteBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.pacienteDataGridView = new System.Windows.Forms.DataGridView();
+            this.pacientealergiaDataGridView = new System.Windows.Forms.DataGridView();
+            this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorMoveFirstItem1 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem1 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem1 = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorCountItem1 = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem1 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem1 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorAddNewItem1 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorDeleteItem1 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.pacienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.zeGotinhaDataSet = new ZeGotinha.ZeGotinhaDataSet();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -98,6 +109,25 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pacientealergiaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pacienteTableAdapter = new ZeGotinha.ZeGotinhaDataSetTableAdapters.pacienteTableAdapter();
+            this.tableAdapterManager = new ZeGotinha.ZeGotinhaDataSetTableAdapters.TableAdapterManager();
+            this.pacientealergiaTableAdapter = new ZeGotinha.ZeGotinhaDataSetTableAdapters.pacientealergiaTableAdapter();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.pacientedoencaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pacientedoencaTableAdapter = new ZeGotinha.ZeGotinhaDataSetTableAdapters.pacientedoencaTableAdapter();
+            this.pacientedoencaDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             sexoLabel = new System.Windows.Forms.Label();
             idpacienteLabel = new System.Windows.Forms.Label();
             nomepacienteLabel = new System.Windows.Forms.Label();
@@ -111,21 +141,28 @@
             dataaltaLabel = new System.Windows.Forms.Label();
             datadiagnosticoLabel = new System.Windows.Forms.Label();
             idpacientealergiaLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.zeGotinhaDataSet)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pacientealergiaDataGridView)).BeginInit();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pacienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pacienteBindingNavigator)).BeginInit();
             this.pacienteBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pacienteDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pacientealergiaDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
+            this.bindingNavigator1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pacienteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zeGotinhaDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pacientealergiaBindingSource)).BeginInit();
+            this.groupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pacientedoencaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pacientedoencaDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // sexoLabel
@@ -199,11 +236,6 @@
             celularLabel.Size = new System.Drawing.Size(42, 13);
             celularLabel.TabIndex = 14;
             celularLabel.Text = "Celular:";
-            // 
-            // zeGotinhaDataSet
-            // 
-            this.zeGotinhaDataSet.DataSetName = "ZeGotinhaDataSet";
-            this.zeGotinhaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tabControl1
             // 
@@ -377,7 +409,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(518, 494);
+            this.tabPage2.Size = new System.Drawing.Size(531, 490);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Dados Clínico";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -387,7 +419,7 @@
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(504, 462);
+            this.tabPage6.Size = new System.Drawing.Size(517, 458);
             this.tabPage6.TabIndex = 3;
             this.tabPage6.Text = "Histórico Peso";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -397,17 +429,20 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(504, 462);
+            this.tabPage5.Size = new System.Drawing.Size(517, 458);
             this.tabPage5.TabIndex = 2;
             this.tabPage5.Text = "Vacinas";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // tabPage4
             // 
+            this.tabPage4.AutoScroll = true;
+            this.tabPage4.Controls.Add(this.groupBox6);
+            this.tabPage4.Controls.Add(this.groupBox5);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(504, 462);
+            this.tabPage4.Size = new System.Drawing.Size(517, 458);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "Histórico Doenças";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -420,7 +455,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(504, 462);
+            this.tabPage3.Size = new System.Drawing.Size(517, 458);
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "Histórico Alérgico";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -435,11 +470,12 @@
             this.tabControl2.Location = new System.Drawing.Point(3, 3);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(512, 488);
+            this.tabControl2.Size = new System.Drawing.Size(525, 484);
             this.tabControl2.TabIndex = 0;
             // 
             // idpacienteTextBox1
             // 
+            this.idpacienteTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pacientealergiaBindingSource, "idpaciente", true));
             this.idpacienteTextBox1.Enabled = false;
             this.idpacienteTextBox1.Location = new System.Drawing.Point(283, 16);
             this.idpacienteTextBox1.Name = "idpacienteTextBox1";
@@ -457,6 +493,7 @@
             // 
             // observacoesTextBox
             // 
+            this.observacoesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pacientealergiaBindingSource, "observacoes", true));
             this.observacoesTextBox.Location = new System.Drawing.Point(103, 68);
             this.observacoesTextBox.Name = "observacoesTextBox";
             this.observacoesTextBox.Size = new System.Drawing.Size(379, 20);
@@ -467,12 +504,13 @@
             observacoesLabel.AutoSize = true;
             observacoesLabel.Location = new System.Drawing.Point(6, 71);
             observacoesLabel.Name = "observacoesLabel";
-            observacoesLabel.Size = new System.Drawing.Size(71, 13);
+            observacoesLabel.Size = new System.Drawing.Size(73, 13);
             observacoesLabel.TabIndex = 7;
-            observacoesLabel.Text = "observacoes:";
+            observacoesLabel.Text = "Observacoes:";
             // 
             // dataaltaMaskedTextBox
             // 
+            this.dataaltaMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pacientealergiaBindingSource, "dataalta", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "d"));
             this.dataaltaMaskedTextBox.Location = new System.Drawing.Point(283, 42);
             this.dataaltaMaskedTextBox.Mask = "00/00/0000";
             this.dataaltaMaskedTextBox.Name = "dataaltaMaskedTextBox";
@@ -491,6 +529,7 @@
             // 
             // datadiagnosticoMaskedTextBox
             // 
+            this.datadiagnosticoMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pacientealergiaBindingSource, "datadiagnostico", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "d"));
             this.datadiagnosticoMaskedTextBox.Location = new System.Drawing.Point(103, 42);
             this.datadiagnosticoMaskedTextBox.Mask = "00/00/0000";
             this.datadiagnosticoMaskedTextBox.Name = "datadiagnosticoMaskedTextBox";
@@ -509,6 +548,7 @@
             // 
             // idpacientealergiaTextBox
             // 
+            this.idpacientealergiaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pacientealergiaBindingSource, "idpacientealergia", true));
             this.idpacientealergiaTextBox.Enabled = false;
             this.idpacientealergiaTextBox.Location = new System.Drawing.Point(103, 16);
             this.idpacientealergiaTextBox.Name = "idpacientealergiaTextBox";
@@ -526,6 +566,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.bindingNavigator1);
             this.groupBox3.Controls.Add(idpacientealergiaLabel);
             this.groupBox3.Controls.Add(this.idpacientealergiaTextBox);
             this.groupBox3.Controls.Add(datadiagnosticoLabel);
@@ -539,19 +580,10 @@
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox3.Location = new System.Drawing.Point(3, 3);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(498, 127);
+            this.groupBox3.Size = new System.Drawing.Size(511, 127);
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Dados Alergia";
-            // 
-            // pacientealergiaDataGridView
-            // 
-            this.pacientealergiaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.pacientealergiaDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pacientealergiaDataGridView.Location = new System.Drawing.Point(3, 16);
-            this.pacientealergiaDataGridView.Name = "pacientealergiaDataGridView";
-            this.pacientealergiaDataGridView.Size = new System.Drawing.Size(492, 310);
-            this.pacientealergiaDataGridView.TabIndex = 0;
             // 
             // groupBox4
             // 
@@ -559,41 +591,10 @@
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox4.Location = new System.Drawing.Point(3, 130);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(498, 329);
+            this.groupBox4.Size = new System.Drawing.Size(511, 325);
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Diagnóstico Alérgico";
-            // 
-            // pacienteBindingSource
-            // 
-            this.pacienteBindingSource.DataMember = "paciente";
-            this.pacienteBindingSource.DataSource = this.zeGotinhaDataSet;
-            // 
-            // pacienteTableAdapter
-            // 
-            this.pacienteTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.alergiamotivoTableAdapter = null;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.doencaTableAdapter = null;
-            this.tableAdapterManager.elementonaturalTableAdapter = null;
-            this.tableAdapterManager.medicamentocomposicaoTableAdapter = null;
-            this.tableAdapterManager.medicamentoTableAdapter = null;
-            this.tableAdapterManager.medicoTableAdapter = null;
-            this.tableAdapterManager.pacientealergiaTableAdapter = null;
-            this.tableAdapterManager.pacientedoencaTableAdapter = null;
-            this.tableAdapterManager.pacientepesoTableAdapter = null;
-            this.tableAdapterManager.pacienteTableAdapter = this.pacienteTableAdapter;
-            this.tableAdapterManager.pacientevacinaTableAdapter = null;
-            this.tableAdapterManager.posologiaTableAdapter = null;
-            this.tableAdapterManager.postoTableAdapter = null;
-            this.tableAdapterManager.principioativoTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = ZeGotinha.ZeGotinhaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.vacinacronogramaTableAdapter = null;
-            this.tableAdapterManager.vacinadoencaTableAdapter = null;
-            this.tableAdapterManager.vacinaTableAdapter = null;
             // 
             // pacienteBindingNavigator
             // 
@@ -661,14 +662,14 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 15);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -676,7 +677,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -685,13 +686,13 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -708,7 +709,7 @@
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // pacienteBindingNavigatorSaveItem
@@ -716,7 +717,7 @@
             this.pacienteBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.pacienteBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("pacienteBindingNavigatorSaveItem.Image")));
             this.pacienteBindingNavigatorSaveItem.Name = "pacienteBindingNavigatorSaveItem";
-            this.pacienteBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.pacienteBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.pacienteBindingNavigatorSaveItem.Text = "Save Data";
             this.pacienteBindingNavigatorSaveItem.Click += new System.EventHandler(this.pacienteBindingNavigatorSaveItem_Click_1);
             // 
@@ -739,6 +740,160 @@
             this.pacienteDataGridView.Name = "pacienteDataGridView";
             this.pacienteDataGridView.Size = new System.Drawing.Size(519, 244);
             this.pacienteDataGridView.TabIndex = 17;
+            // 
+            // pacientealergiaDataGridView
+            // 
+            this.pacientealergiaDataGridView.AutoGenerateColumns = false;
+            this.pacientealergiaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.pacientealergiaDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12});
+            this.pacientealergiaDataGridView.DataSource = this.pacientealergiaBindingSource;
+            this.pacientealergiaDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pacientealergiaDataGridView.Location = new System.Drawing.Point(3, 16);
+            this.pacientealergiaDataGridView.Name = "pacientealergiaDataGridView";
+            this.pacientealergiaDataGridView.Size = new System.Drawing.Size(505, 306);
+            this.pacientealergiaDataGridView.TabIndex = 0;
+            // 
+            // bindingNavigator1
+            // 
+            this.bindingNavigator1.AddNewItem = this.bindingNavigatorAddNewItem1;
+            this.bindingNavigator1.BindingSource = this.pacientealergiaBindingSource;
+            this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem1;
+            this.bindingNavigator1.DeleteItem = this.bindingNavigatorDeleteItem1;
+            this.bindingNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem1,
+            this.bindingNavigatorMovePreviousItem1,
+            this.bindingNavigatorSeparator3,
+            this.bindingNavigatorPositionItem1,
+            this.bindingNavigatorCountItem1,
+            this.bindingNavigatorSeparator4,
+            this.bindingNavigatorMoveNextItem1,
+            this.bindingNavigatorMoveLastItem1,
+            this.bindingNavigatorSeparator5,
+            this.bindingNavigatorAddNewItem1,
+            this.bindingNavigatorDeleteItem1,
+            this.bindingNavigatorSaveItem});
+            this.bindingNavigator1.Location = new System.Drawing.Point(3, 99);
+            this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem1;
+            this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem1;
+            this.bindingNavigator1.MoveNextItem = this.bindingNavigatorMoveNextItem1;
+            this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem1;
+            this.bindingNavigator1.Name = "bindingNavigator1";
+            this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem1;
+            this.bindingNavigator1.Size = new System.Drawing.Size(505, 25);
+            this.bindingNavigator1.TabIndex = 11;
+            this.bindingNavigator1.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorMoveFirstItem1
+            // 
+            this.bindingNavigatorMoveFirstItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem1.Image")));
+            this.bindingNavigatorMoveFirstItem1.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem1.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem1.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem1.Text = "Move first";
+            // 
+            // bindingNavigatorMovePreviousItem1
+            // 
+            this.bindingNavigatorMovePreviousItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem1.Image")));
+            this.bindingNavigatorMovePreviousItem1.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem1.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem1.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem1.Text = "Move previous";
+            // 
+            // bindingNavigatorSeparator3
+            // 
+            this.bindingNavigatorSeparator3.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator3.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorPositionItem1
+            // 
+            this.bindingNavigatorPositionItem1.AccessibleName = "Position";
+            this.bindingNavigatorPositionItem1.AutoSize = false;
+            this.bindingNavigatorPositionItem1.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem1.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem1.Text = "0";
+            this.bindingNavigatorPositionItem1.ToolTipText = "Current position";
+            // 
+            // bindingNavigatorCountItem1
+            // 
+            this.bindingNavigatorCountItem1.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem1.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem1.Text = "of {0}";
+            this.bindingNavigatorCountItem1.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorSeparator4
+            // 
+            this.bindingNavigatorSeparator4.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator4.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorMoveNextItem1
+            // 
+            this.bindingNavigatorMoveNextItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem1.Image")));
+            this.bindingNavigatorMoveNextItem1.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem1.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem1.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem1.Text = "Move next";
+            // 
+            // bindingNavigatorMoveLastItem1
+            // 
+            this.bindingNavigatorMoveLastItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem1.Image")));
+            this.bindingNavigatorMoveLastItem1.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem1.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem1.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem1.Text = "Move last";
+            // 
+            // bindingNavigatorSeparator5
+            // 
+            this.bindingNavigatorSeparator5.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator5.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorAddNewItem1
+            // 
+            this.bindingNavigatorAddNewItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem1.Image")));
+            this.bindingNavigatorAddNewItem1.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem1.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem1.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem1.Text = "Add new";
+            this.bindingNavigatorAddNewItem1.Click += new System.EventHandler(this.bindingNavigatorAddNewItem1_Click);
+            // 
+            // bindingNavigatorDeleteItem1
+            // 
+            this.bindingNavigatorDeleteItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem1.Image")));
+            this.bindingNavigatorDeleteItem1.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem1.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem1.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem1.Text = "Delete";
+            // 
+            // bindingNavigatorSaveItem
+            // 
+            this.bindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorSaveItem.Image")));
+            this.bindingNavigatorSaveItem.Name = "bindingNavigatorSaveItem";
+            this.bindingNavigatorSaveItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorSaveItem.Text = "Save Data";
+            this.bindingNavigatorSaveItem.Click += new System.EventHandler(this.bindingNavigatorSaveItem_Click);
+            // 
+            // pacienteBindingSource
+            // 
+            this.pacienteBindingSource.DataMember = "paciente";
+            this.pacienteBindingSource.DataSource = this.zeGotinhaDataSet;
+            // 
+            // zeGotinhaDataSet
+            // 
+            this.zeGotinhaDataSet.DataSetName = "ZeGotinhaDataSet";
+            this.zeGotinhaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -789,6 +944,148 @@
             this.dataGridViewTextBoxColumn8.HeaderText = "celular";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             // 
+            // pacientealergiaBindingSource
+            // 
+            this.pacientealergiaBindingSource.DataMember = "pacientealergia";
+            this.pacientealergiaBindingSource.DataSource = this.zeGotinhaDataSet;
+            // 
+            // pacienteTableAdapter
+            // 
+            this.pacienteTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.alergiamotivoTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.doencaTableAdapter = null;
+            this.tableAdapterManager.elementonaturalTableAdapter = null;
+            this.tableAdapterManager.medicamentocomposicaoTableAdapter = null;
+            this.tableAdapterManager.medicamentoTableAdapter = null;
+            this.tableAdapterManager.medicoTableAdapter = null;
+            this.tableAdapterManager.pacientealergiaTableAdapter = this.pacientealergiaTableAdapter;
+            this.tableAdapterManager.pacientedoencaTableAdapter = null;
+            this.tableAdapterManager.pacientepesoTableAdapter = null;
+            this.tableAdapterManager.pacienteTableAdapter = this.pacienteTableAdapter;
+            this.tableAdapterManager.pacientevacinaTableAdapter = null;
+            this.tableAdapterManager.posologiaTableAdapter = null;
+            this.tableAdapterManager.postoTableAdapter = null;
+            this.tableAdapterManager.principioativoTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = ZeGotinha.ZeGotinhaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.vacinacronogramaTableAdapter = null;
+            this.tableAdapterManager.vacinadoencaTableAdapter = null;
+            this.tableAdapterManager.vacinaTableAdapter = null;
+            // 
+            // pacientealergiaTableAdapter
+            // 
+            this.pacientealergiaTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "idpaciente";
+            this.dataGridViewTextBoxColumn13.HeaderText = "idpaciente";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "idpacientealergia";
+            this.dataGridViewTextBoxColumn9.HeaderText = "idpacientealergia";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "datadiagnostico";
+            this.dataGridViewTextBoxColumn10.HeaderText = "datadiagnostico";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "dataalta";
+            this.dataGridViewTextBoxColumn11.HeaderText = "dataalta";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "observacoes";
+            this.dataGridViewTextBoxColumn12.HeaderText = "observacoes";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox5.Location = new System.Drawing.Point(3, 3);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(511, 142);
+            this.groupBox5.TabIndex = 0;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Dados Doença";
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.pacientedoencaDataGridView);
+            this.groupBox6.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox6.Location = new System.Drawing.Point(3, 151);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(511, 304);
+            this.groupBox6.TabIndex = 1;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Diagnostico Doenças";
+            // 
+            // pacientedoencaBindingSource
+            // 
+            this.pacientedoencaBindingSource.DataMember = "pacientedoenca";
+            this.pacientedoencaBindingSource.DataSource = this.zeGotinhaDataSet;
+            // 
+            // pacientedoencaTableAdapter
+            // 
+            this.pacientedoencaTableAdapter.ClearBeforeFill = true;
+            // 
+            // pacientedoencaDataGridView
+            // 
+            this.pacientedoencaDataGridView.AutoGenerateColumns = false;
+            this.pacientedoencaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.pacientedoencaDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn18,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15,
+            this.dataGridViewTextBoxColumn16,
+            this.dataGridViewTextBoxColumn17});
+            this.pacientedoencaDataGridView.DataSource = this.pacientedoencaBindingSource;
+            this.pacientedoencaDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pacientedoencaDataGridView.Location = new System.Drawing.Point(3, 16);
+            this.pacientedoencaDataGridView.Name = "pacientedoencaDataGridView";
+            this.pacientedoencaDataGridView.Size = new System.Drawing.Size(505, 285);
+            this.pacientedoencaDataGridView.TabIndex = 0;
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "idpaciente";
+            this.dataGridViewTextBoxColumn18.HeaderText = "idpaciente";
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "idpacientedoenca";
+            this.dataGridViewTextBoxColumn14.HeaderText = "idpacientedoenca";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "iddoenca";
+            this.dataGridViewTextBoxColumn15.HeaderText = "iddoenca";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "datadoenca";
+            this.dataGridViewTextBoxColumn16.HeaderText = "datadoenca";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "datacura";
+            this.dataGridViewTextBoxColumn17.HeaderText = "datacura";
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            // 
             // FrmPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -801,7 +1098,6 @@
             this.Text = "Cadastro Paciente";
             this.Load += new System.EventHandler(this.FrmPaciente_Load);
             this.Shown += new System.EventHandler(this.FrmPaciente_Shown);
-            ((System.ComponentModel.ISupportInitialize)(this.zeGotinhaDataSet)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
@@ -809,17 +1105,26 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pacientealergiaDataGridView)).EndInit();
             this.groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pacienteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pacienteBindingNavigator)).EndInit();
             this.pacienteBindingNavigator.ResumeLayout(false);
             this.pacienteBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pacienteDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pacientealergiaDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
+            this.bindingNavigator1.ResumeLayout(false);
+            this.bindingNavigator1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pacienteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zeGotinhaDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pacientealergiaBindingSource)).EndInit();
+            this.groupBox6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pacientedoencaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pacientedoencaDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -846,7 +1151,6 @@
         private System.Windows.Forms.TabControl tabControl2;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.DataGridView pacientealergiaDataGridView;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox idpacientealergiaTextBox;
         private System.Windows.Forms.MaskedTextBox datadiagnosticoMaskedTextBox;
@@ -881,5 +1185,36 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private ZeGotinhaDataSetTableAdapters.pacientealergiaTableAdapter pacientealergiaTableAdapter;
+        private System.Windows.Forms.BindingSource pacientealergiaBindingSource;
+        private System.Windows.Forms.DataGridView pacientealergiaDataGridView;
+        private System.Windows.Forms.BindingNavigator bindingNavigator1;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem1;
+        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem1;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem1;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem1;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem1;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator3;
+        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem1;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator4;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem1;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem1;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator5;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorSaveItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.BindingSource pacientedoencaBindingSource;
+        private ZeGotinhaDataSetTableAdapters.pacientedoencaTableAdapter pacientedoencaTableAdapter;
+        private System.Windows.Forms.DataGridView pacientedoencaDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
     }
 }

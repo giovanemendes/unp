@@ -27,6 +27,10 @@ namespace ZeGotinha
 
         private void FrmPaciente_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'zeGotinhaDataSet.pacientedoenca' table. You can move, or remove it, as needed.
+            this.pacientedoencaTableAdapter.Fill(this.zeGotinhaDataSet.pacientedoenca);
+            // TODO: This line of code loads data into the 'zeGotinhaDataSet.pacientealergia' table. You can move, or remove it, as needed.
+            this.pacientealergiaTableAdapter.Fill(this.zeGotinhaDataSet.pacientealergia);
             // TODO: This line of code loads data into the 'zeGotinhaDataSet.paciente' table. You can move, or remove it, as needed.
             this.pacienteTableAdapter.Fill(this.zeGotinhaDataSet.paciente);            
             // TODO: This line of code loads data into the 'zeGotinhaDataSet.paciente' table. You can move, or remove it, as needed.
@@ -66,6 +70,18 @@ namespace ZeGotinha
             this.pacienteBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.zeGotinhaDataSet);
 
+        }
+
+        private void bindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.pacientealergiaBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.zeGotinhaDataSet);
+        }
+
+        private void bindingNavigatorAddNewItem1_Click(object sender, EventArgs e)
+        {
+            this.idpacienteTextBox1.Text = this.idpacienteTextBox.Text;
         }
     }
 }

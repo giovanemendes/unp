@@ -3138,10 +3138,10 @@ namespace ZeGotinha {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public pacientealergiaRow AddpacientealergiaRow(long idpacientealergia, System.DateTime datadiagnostico, System.DateTime dataalta, string observacoes, pacienteRow parentpacienteRowByFK_pacientealergia_paciente) {
+            public pacientealergiaRow AddpacientealergiaRow(System.DateTime datadiagnostico, System.DateTime dataalta, string observacoes, pacienteRow parentpacienteRowByFK_pacientealergia_paciente) {
                 pacientealergiaRow rowpacientealergiaRow = ((pacientealergiaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        idpacientealergia,
+                        null,
                         datadiagnostico,
                         dataalta,
                         observacoes,
@@ -3200,6 +3200,9 @@ namespace ZeGotinha {
                 base.Columns.Add(this.columnidpaciente);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnidpacientealergia}, true));
+                this.columnidpacientealergia.AutoIncrement = true;
+                this.columnidpacientealergia.AutoIncrementSeed = -1;
+                this.columnidpacientealergia.AutoIncrementStep = -1;
                 this.columnidpacientealergia.AllowDBNull = false;
                 this.columnidpacientealergia.Unique = true;
                 this.columndatadiagnostico.AllowDBNull = false;
@@ -3457,10 +3460,10 @@ namespace ZeGotinha {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public pacientedoencaRow AddpacientedoencaRow(long idpacientedoenca, doencaRow parentdoencaRowByFK_pacientedoenca_doenca, System.DateTime datadoenca, System.DateTime datacura, pacienteRow parentpacienteRowByFK_pacientedoenca_paciente) {
+            public pacientedoencaRow AddpacientedoencaRow(doencaRow parentdoencaRowByFK_pacientedoenca_doenca, System.DateTime datadoenca, System.DateTime datacura, pacienteRow parentpacienteRowByFK_pacientedoenca_paciente) {
                 pacientedoencaRow rowpacientedoencaRow = ((pacientedoencaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        idpacientedoenca,
+                        null,
                         null,
                         datadoenca,
                         datacura,
@@ -3522,6 +3525,9 @@ namespace ZeGotinha {
                 base.Columns.Add(this.columnidpaciente);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnidpacientedoenca}, true));
+                this.columnidpacientedoenca.AutoIncrement = true;
+                this.columnidpacientedoenca.AutoIncrementSeed = -1;
+                this.columnidpacientedoenca.AutoIncrementStep = -1;
                 this.columnidpacientedoenca.AllowDBNull = false;
                 this.columnidpacientedoenca.Unique = true;
                 this.columniddoenca.AllowDBNull = false;
@@ -8542,7 +8548,7 @@ SELECT idalergiamotivo, idelementonatural, idprincipioativo FROM alergiamotivo W
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ZeGotinha.Properties.Settings.Default.ZeGotinhaConnection;
+            this._connection.ConnectionString = "Data Source=BEE;Initial Catalog=ZeGotinha;Integrated Security=True";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8894,7 +8900,7 @@ SELECT idalergiamotivo, idelementonatural, idprincipioativo FROM alergiamotivo W
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ZeGotinha.Properties.Settings.Default.ZeGotinhaConnection;
+            this._connection.ConnectionString = "Data Source=BEE;Initial Catalog=ZeGotinha;Integrated Security=True";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9212,7 +9218,7 @@ SELECT idelementonatural, nomeelementonatural FROM elementonatural WHERE (idelem
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ZeGotinha.Properties.Settings.Default.ZeGotinhaConnection;
+            this._connection.ConnectionString = "Data Source=BEE;Initial Catalog=ZeGotinha;Integrated Security=True";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9530,7 +9536,7 @@ SELECT idmedicamento, nomemedicamento FROM medicamento WHERE (idmedicamento = @i
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ZeGotinha.Properties.Settings.Default.ZeGotinhaConnection;
+            this._connection.ConnectionString = "Data Source=BEE;Initial Catalog=ZeGotinha;Integrated Security=True";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9848,7 +9854,7 @@ SELECT idmedicamento, idprincipioativo FROM medicamentocomposicao WHERE (idmedic
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ZeGotinha.Properties.Settings.Default.ZeGotinhaConnection;
+            this._connection.ConnectionString = "Data Source=BEE;Initial Catalog=ZeGotinha;Integrated Security=True";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10147,7 +10153,7 @@ SELECT idmedicamento, idprincipioativo FROM medicamentocomposicao WHERE (idmedic
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ZeGotinha.Properties.Settings.Default.ZeGotinhaConnection;
+            this._connection.ConnectionString = "Data Source=BEE;Initial Catalog=ZeGotinha;Integrated Security=True";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10501,7 +10507,7 @@ SELECT idpaciente, nomepaciente, sexo, datanascimento, tiposanguineo, fatorsangu
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ZeGotinha.Properties.Settings.Default.ZeGotinhaConnection;
+            this._connection.ConnectionString = "Data Source=BEE;Initial Catalog=ZeGotinha;Integrated Security=True";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10964,20 +10970,18 @@ SELECT idpaciente, nomepaciente, sexo, datanascimento, tiposanguineo, fatorsangu
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idpaciente", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idpaciente", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[pacientealergia] ([idpacientealergia], [datadiagnostico], [dataalta], [observacoes], [idpaciente]) VALUES (@idpacientealergia, @datadiagnostico, @dataalta, @observacoes, @idpaciente);
-SELECT idpacientealergia, datadiagnostico, dataalta, observacoes, idpaciente FROM pacientealergia WHERE (idpacientealergia = @idpacientealergia)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[pacientealergia] ([datadiagnostico], [dataalta], [observacoes], [idpaciente]) VALUES (@datadiagnostico, @dataalta, @observacoes, @idpaciente);
+SELECT idpacientealergia, datadiagnostico, dataalta, observacoes, idpaciente FROM pacientealergia WHERE (idpacientealergia = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idpacientealergia", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idpacientealergia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@datadiagnostico", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "datadiagnostico", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dataalta", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dataalta", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@observacoes", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "observacoes", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idpaciente", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idpaciente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[pacientealergia] SET [idpacientealergia] = @idpacientealergia, [datadiagnostico] = @datadiagnostico, [dataalta] = @dataalta, [observacoes] = @observacoes, [idpaciente] = @idpaciente WHERE (([idpacientealergia] = @Original_idpacientealergia) AND ([datadiagnostico] = @Original_datadiagnostico) AND ((@IsNull_dataalta = 1 AND [dataalta] IS NULL) OR ([dataalta] = @Original_dataalta)) AND ((@IsNull_observacoes = 1 AND [observacoes] IS NULL) OR ([observacoes] = @Original_observacoes)) AND ((@IsNull_idpaciente = 1 AND [idpaciente] IS NULL) OR ([idpaciente] = @Original_idpaciente)));
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[pacientealergia] SET [datadiagnostico] = @datadiagnostico, [dataalta] = @dataalta, [observacoes] = @observacoes, [idpaciente] = @idpaciente WHERE (([idpacientealergia] = @Original_idpacientealergia) AND ([datadiagnostico] = @Original_datadiagnostico) AND ((@IsNull_dataalta = 1 AND [dataalta] IS NULL) OR ([dataalta] = @Original_dataalta)) AND ((@IsNull_observacoes = 1 AND [observacoes] IS NULL) OR ([observacoes] = @Original_observacoes)) AND ((@IsNull_idpaciente = 1 AND [idpaciente] IS NULL) OR ([idpaciente] = @Original_idpaciente)));
 SELECT idpacientealergia, datadiagnostico, dataalta, observacoes, idpaciente FROM pacientealergia WHERE (idpacientealergia = @idpacientealergia)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idpacientealergia", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idpacientealergia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@datadiagnostico", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "datadiagnostico", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dataalta", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dataalta", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@observacoes", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "observacoes", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -10990,13 +10994,14 @@ SELECT idpacientealergia, datadiagnostico, dataalta, observacoes, idpaciente FRO
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_observacoes", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "observacoes", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_idpaciente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idpaciente", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idpaciente", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idpaciente", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idpacientealergia", global::System.Data.SqlDbType.BigInt, 8, global::System.Data.ParameterDirection.Input, 0, 0, "idpacientealergia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ZeGotinha.Properties.Settings.Default.ZeGotinhaConnection;
+            this._connection.ConnectionString = "Data Source=BEE;Initial Catalog=ZeGotinha;Integrated Security=True";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11114,26 +11119,25 @@ SELECT idpacientealergia, datadiagnostico, dataalta, observacoes, idpaciente FRO
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(long idpacientealergia, System.DateTime datadiagnostico, global::System.Nullable<global::System.DateTime> dataalta, string observacoes, global::System.Nullable<long> idpaciente) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((long)(idpacientealergia));
-            this.Adapter.InsertCommand.Parameters[1].Value = ((System.DateTime)(datadiagnostico));
+        public virtual int Insert(System.DateTime datadiagnostico, global::System.Nullable<global::System.DateTime> dataalta, string observacoes, global::System.Nullable<long> idpaciente) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((System.DateTime)(datadiagnostico));
             if ((dataalta.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(dataalta.Value));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((System.DateTime)(dataalta.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             if ((observacoes == null)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(observacoes));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(observacoes));
             }
             if ((idpaciente.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((long)(idpaciente.Value));
+                this.Adapter.InsertCommand.Parameters[3].Value = ((long)(idpaciente.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -11155,53 +11159,53 @@ SELECT idpacientealergia, datadiagnostico, dataalta, observacoes, idpaciente FRO
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(long idpacientealergia, System.DateTime datadiagnostico, global::System.Nullable<global::System.DateTime> dataalta, string observacoes, global::System.Nullable<long> idpaciente, long Original_idpacientealergia, System.DateTime Original_datadiagnostico, global::System.Nullable<global::System.DateTime> Original_dataalta, string Original_observacoes, global::System.Nullable<long> Original_idpaciente) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((long)(idpacientealergia));
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((System.DateTime)(datadiagnostico));
+        public virtual int Update(System.DateTime datadiagnostico, global::System.Nullable<global::System.DateTime> dataalta, string observacoes, global::System.Nullable<long> idpaciente, long Original_idpacientealergia, System.DateTime Original_datadiagnostico, global::System.Nullable<global::System.DateTime> Original_dataalta, string Original_observacoes, global::System.Nullable<long> Original_idpaciente, long idpacientealergia) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((System.DateTime)(datadiagnostico));
             if ((dataalta.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(dataalta.Value));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((System.DateTime)(dataalta.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             if ((observacoes == null)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(observacoes));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(observacoes));
             }
             if ((idpaciente.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((long)(idpaciente.Value));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((long)(idpaciente.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((long)(Original_idpacientealergia));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((System.DateTime)(Original_datadiagnostico));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((long)(Original_idpacientealergia));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((System.DateTime)(Original_datadiagnostico));
             if ((Original_dataalta.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((System.DateTime)(Original_dataalta.Value));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((System.DateTime)(Original_dataalta.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             if ((Original_observacoes == null)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_observacoes));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_observacoes));
             }
             if ((Original_idpaciente.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((long)(Original_idpaciente.Value));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((long)(Original_idpaciente.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((long)(idpacientealergia));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -11223,7 +11227,7 @@ SELECT idpacientealergia, datadiagnostico, dataalta, observacoes, idpaciente FRO
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(System.DateTime datadiagnostico, global::System.Nullable<global::System.DateTime> dataalta, string observacoes, global::System.Nullable<long> idpaciente, long Original_idpacientealergia, System.DateTime Original_datadiagnostico, global::System.Nullable<global::System.DateTime> Original_dataalta, string Original_observacoes, global::System.Nullable<long> Original_idpaciente) {
-            return this.Update(Original_idpacientealergia, datadiagnostico, dataalta, observacoes, idpaciente, Original_idpacientealergia, Original_datadiagnostico, Original_dataalta, Original_observacoes, Original_idpaciente);
+            return this.Update(datadiagnostico, dataalta, observacoes, idpaciente, Original_idpacientealergia, Original_datadiagnostico, Original_dataalta, Original_observacoes, Original_idpaciente, Original_idpacientealergia);
         }
     }
     
@@ -11398,7 +11402,7 @@ SELECT idpacientedoenca, iddoenca, datadoenca, datacura, idpaciente FROM pacient
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ZeGotinha.Properties.Settings.Default.ZeGotinhaConnection;
+            this._connection.ConnectionString = "Data Source=BEE;Initial Catalog=ZeGotinha;Integrated Security=True";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11769,7 +11773,7 @@ SELECT idpacientepeso, datapesagem, peso, idpaciente FROM pacientepeso WHERE (id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ZeGotinha.Properties.Settings.Default.ZeGotinhaConnection;
+            this._connection.ConnectionString = "Data Source=BEE;Initial Catalog=ZeGotinha;Integrated Security=True";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12093,7 +12097,7 @@ SELECT idpacientevacina, idposto, idpaciente, idvacina, datavacina, responsavel 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ZeGotinha.Properties.Settings.Default.ZeGotinhaConnection;
+            this._connection.ConnectionString = "Data Source=BEE;Initial Catalog=ZeGotinha;Integrated Security=True";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12463,7 +12467,7 @@ SELECT idposologia, dataposologia, idmedico, idmedicamento, textoposologia, inte
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ZeGotinha.Properties.Settings.Default.ZeGotinhaConnection;
+            this._connection.ConnectionString = "Data Source=BEE;Initial Catalog=ZeGotinha;Integrated Security=True";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12903,7 +12907,7 @@ SELECT idposto, nomeposto, tipoposto FROM posto WHERE (idposto = @idposto)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ZeGotinha.Properties.Settings.Default.ZeGotinhaConnection;
+            this._connection.ConnectionString = "Data Source=BEE;Initial Catalog=ZeGotinha;Integrated Security=True";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13249,7 +13253,7 @@ SELECT idprincipioativo, nomeprincipioativo FROM principioativo WHERE (idprincip
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ZeGotinha.Properties.Settings.Default.ZeGotinhaConnection;
+            this._connection.ConnectionString = "Data Source=BEE;Initial Catalog=ZeGotinha;Integrated Security=True";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13567,7 +13571,7 @@ SELECT idprincipioativo, nomeprincipioativo FROM principioativo WHERE (idprincip
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ZeGotinha.Properties.Settings.Default.ZeGotinhaConnection;
+            this._connection.ConnectionString = "Data Source=BEE;Initial Catalog=ZeGotinha;Integrated Security=True";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13910,7 +13914,7 @@ SELECT idvacinacronograma, descricao, tipo, valorinicial, valorfinal, idvacina, 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ZeGotinha.Properties.Settings.Default.ZeGotinhaConnection;
+            this._connection.ConnectionString = "Data Source=BEE;Initial Catalog=ZeGotinha;Integrated Security=True";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -14311,7 +14315,7 @@ SELECT idvacina, iddoenca FROM vacinadoenca WHERE (iddoenca = @iddoenca) AND (id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ZeGotinha.Properties.Settings.Default.ZeGotinhaConnection;
+            this._connection.ConnectionString = "Data Source=BEE;Initial Catalog=ZeGotinha;Integrated Security=True";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
