@@ -18,7 +18,7 @@ namespace ZeGotinha
         }
 
         private void pacienteBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
+        {            
             this.Validate();
             this.pacienteBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.zeGotinhaDataSet);
@@ -27,6 +27,8 @@ namespace ZeGotinha
 
         private void FrmPaciente_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'zeGotinhaDataSet.paciente' table. You can move, or remove it, as needed.
+            this.pacienteTableAdapter.Fill(this.zeGotinhaDataSet.paciente);            
             // TODO: This line of code loads data into the 'zeGotinhaDataSet.paciente' table. You can move, or remove it, as needed.
             this.pacienteTableAdapter.Fill(this.zeGotinhaDataSet.paciente);
 
@@ -51,7 +53,19 @@ namespace ZeGotinha
         private void FrmPaciente_Shown(object sender, EventArgs e)
         {
             this.comboBoxTipoPesquisa.SelectedIndex = 0;
-            //this.sexoComboBox.SelectedIndex = 0;
+        }
+
+        private void toolStripButton7_Click(object sender, EventArgs e)
+        {
+            this.idpacienteTextBox1.Text = idpacienteTextBox.Text;
+        }
+
+        private void pacienteBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.pacienteBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.zeGotinhaDataSet);
+
         }
     }
 }

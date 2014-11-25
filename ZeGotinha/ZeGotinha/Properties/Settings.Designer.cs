@@ -26,11 +26,23 @@ namespace ZeGotinha.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=BEE;Initial Catalog=ZeGotinha;Persist Security Info=True;User ID=sa;P" +
-            "assword=armagedom")]
+        [global::System.Configuration.DefaultSettingValueAttribute(";Initial Catalog=ZeGotinha;Persist Security Info=True;User ID=sa;Password=armaged" +
+            "om")]
         public string ZeGotinhaConnection {
             get {
                 return ((string)(this["ZeGotinhaConnection"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("2014-11-24")]
+        public global::System.DateTime Data {
+            get {
+                return ((global::System.DateTime)(this["Data"]));
+            }
+            set {
+                this["Data"] = value;
             }
         }
     }
