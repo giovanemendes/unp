@@ -226,6 +226,7 @@
             this.postoTableAdapter = new ZeGotinha.ZeGotinhaDataSetTableAdapters.postoTableAdapter();
             this.vacinaTableAdapter = new ZeGotinha.ZeGotinhaDataSetTableAdapters.vacinaTableAdapter();
             this.pacienteBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.label2 = new System.Windows.Forms.Label();
             sexoLabel = new System.Windows.Forms.Label();
             idpacienteLabel = new System.Windows.Forms.Label();
             nomepacienteLabel = new System.Windows.Forms.Label();
@@ -1306,7 +1307,6 @@
             this.pacienteComboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.pacientedoencaBindingSource, "idpacientedoenca", true));
             this.pacienteComboBox1.DataSource = this.pacienteBindingSource;
             this.pacienteComboBox1.DisplayMember = "nomepaciente";
-            this.pacienteComboBox1.Enabled = false;
             this.pacienteComboBox1.FormattingEnabled = true;
             this.pacienteComboBox1.Location = new System.Drawing.Point(121, 37);
             this.pacienteComboBox1.Name = "pacienteComboBox1";
@@ -1873,6 +1873,7 @@
             // 
             // groupBox9
             // 
+            this.groupBox9.Controls.Add(this.label2);
             this.groupBox9.Controls.Add(this.datapesagemMaskedTextBox);
             this.groupBox9.Controls.Add(this.bindingNavigator4);
             this.groupBox9.Controls.Add(this.pesoMaskedTextBox);
@@ -1939,6 +1940,7 @@
             this.bindingNavigatorAddNewItem4.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem4.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem4.Text = "Add new";
+            this.bindingNavigatorAddNewItem4.Click += new System.EventHandler(this.bindingNavigatorAddNewItem4_Click);
             // 
             // bindingNavigatorCountItem4
             // 
@@ -2030,7 +2032,6 @@
             // 
             this.pesoMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pacientepesoBindingSource, "peso", true));
             this.pesoMaskedTextBox.Location = new System.Drawing.Point(112, 95);
-            this.pesoMaskedTextBox.Mask = "999.00";
             this.pesoMaskedTextBox.Name = "pesoMaskedTextBox";
             this.pesoMaskedTextBox.Size = new System.Drawing.Size(74, 20);
             this.pesoMaskedTextBox.TabIndex = 8;
@@ -2130,6 +2131,15 @@
             // 
             this.pacienteBindingSource4.DataMember = "paciente";
             this.pacienteBindingSource4.DataSource = this.zeGotinhaDataSet;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(192, 98);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(55, 13);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Ex.: 87,65";
             // 
             // FrmPaciente
             // 
@@ -2375,5 +2385,6 @@
         private System.Windows.Forms.TextBox idpacientepesoTextBox;
         private System.Windows.Forms.BindingSource pacienteBindingSource4;
         private System.Windows.Forms.MaskedTextBox datapesagemMaskedTextBox;
+        private System.Windows.Forms.Label label2;
     }
 }

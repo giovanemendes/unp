@@ -27,24 +27,32 @@ namespace ZeGotinha
 
         private void FrmPaciente_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'zeGotinhaDataSet.pacientepeso' table. You can move, or remove it, as needed.
-            this.pacientepesoTableAdapter.Fill(this.zeGotinhaDataSet.pacientepeso);
+
+            // TODO: This line of code loads data into the 'zeGotinhaDataSet.paciente' table. You can move, or remove it, as needed.
+            this.pacienteTableAdapter.Fill(this.zeGotinhaDataSet.paciente);
             // TODO: This line of code loads data into the 'zeGotinhaDataSet.vacina' table. You can move, or remove it, as needed.
             this.vacinaTableAdapter.Fill(this.zeGotinhaDataSet.vacina);
             // TODO: This line of code loads data into the 'zeGotinhaDataSet.posto' table. You can move, or remove it, as needed.
             this.postoTableAdapter.Fill(this.zeGotinhaDataSet.posto);
-            // TODO: This line of code loads data into the 'zeGotinhaDataSet.pacientevacina' table. You can move, or remove it, as needed.
-            this.pacientevacinaTableAdapter.Fill(this.zeGotinhaDataSet.pacientevacina);
             // TODO: This line of code loads data into the 'zeGotinhaDataSet.doenca' table. You can move, or remove it, as needed.
             this.doencaTableAdapter.Fill(this.zeGotinhaDataSet.doenca);
+
+            
+            // listando as doenças, vacinas, peso e alergia de acordo com paciente
+            filtrarDadosClinicosPaciente();
+            
+
+            // TODO: This line of code loads data into the 'zeGotinhaDataSet.pacientevacina' table. You can move, or remove it, as needed.
+            //this.pacientevacinaTableAdapter.Fill(this.zeGotinhaDataSet.pacientevacina);
+            
             // TODO: This line of code loads data into the 'zeGotinhaDataSet.pacientedoenca' table. You can move, or remove it, as needed.
-            this.pacientedoencaTableAdapter.Fill(this.zeGotinhaDataSet.pacientedoenca);
+            //this.pacientedoencaTableAdapter.Fill(this.zeGotinhaDataSet.pacientedoenca);
+            
             // TODO: This line of code loads data into the 'zeGotinhaDataSet.pacientealergia' table. You can move, or remove it, as needed.
-            this.pacientealergiaTableAdapter.Fill(this.zeGotinhaDataSet.pacientealergia);
-            // TODO: This line of code loads data into the 'zeGotinhaDataSet.paciente' table. You can move, or remove it, as needed.
-            this.pacienteTableAdapter.Fill(this.zeGotinhaDataSet.paciente);            
-            // TODO: This line of code loads data into the 'zeGotinhaDataSet.paciente' table. You can move, or remove it, as needed.
-            this.pacienteTableAdapter.Fill(this.zeGotinhaDataSet.paciente);
+            //this.pacientealergiaTableAdapter.Fill(this.zeGotinhaDataSet.pacientealergia);
+
+            // TODO: This line of code loads data into the 'zeGotinhaDataSet.pacientepeso' table. You can move, or remove it, as needed.
+            //this.pacientepesoTableAdapter.Fill(this.zeGotinhaDataSet.pacientepeso);
 
         }
 
@@ -107,9 +115,26 @@ namespace ZeGotinha
 
         private void pacienteBindingSource_CurrentItemChanged(object sender, EventArgs e)
         {
-            // MessageBox.Show("item alterado");
-            // alterar as referencias do paciente nas outras telas
-            
+            filtrarDadosClinicosPaciente();
+        }
+
+        private void filtrarDadosClinicosPaciente()
+        {
+            if (this.pacienteBindingSource.Current != null)
+            {
+                DataRowView row = (DataRowView)this.pacienteBindingSource.Current;
+                Int64 idPaciente = Int64.Parse(row["idpaciente"].ToString());
+
+                this.pacientealergiaTableAdapter.FillByIdPaciente(this.zeGotinhaDataSet.pacientealergia, idPaciente);
+                this.pacientedoencaTableAdapter.FillByIdPaciente(this.zeGotinhaDataSet.pacientedoenca, idPaciente);
+                this.pacientevacinaTableAdapter.FillByIdPaciente(this.zeGotinhaDataSet.pacientevacina, idPaciente);
+                this.pacientepesoTableAdapter.FillByIdPaciente(this.zeGotinhaDataSet.pacientepeso, idPaciente);
+            }
+        }
+
+        private void bindingNavigatorAddNewItem4_Click(object sender, EventArgs e)
+        {
+            this.datapesagemMaskedTextBox.Text = DateTime.Now.ToString("dd/MM/yyyy");
         }
     }
 }

@@ -11007,12 +11007,18 @@ SELECT idpacientealergia, datadiagnostico, dataalta, observacoes, idpaciente FRO
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT idpacientealergia, datadiagnostico, dataalta, observacoes, idpaciente FROM" +
                 " dbo.pacientealergia";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT idpacientealergia, datadiagnostico, dataalta, observacoes, idpaciente FROM" +
+                " dbo.pacientealergia WHERE idpaciente = @idpaciente";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idpaciente", global::System.Data.SqlDbType.BigInt, 8, global::System.Data.ParameterDirection.Input, 0, 0, "idpaciente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11034,6 +11040,42 @@ SELECT idpacientealergia, datadiagnostico, dataalta, observacoes, idpaciente FRO
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual ZeGotinhaDataSet.pacientealergiaDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            ZeGotinhaDataSet.pacientealergiaDataTable dataTable = new ZeGotinhaDataSet.pacientealergiaDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByIdPaciente(ZeGotinhaDataSet.pacientealergiaDataTable dataTable, global::System.Nullable<long> idpaciente) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((idpaciente.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((long)(idpaciente.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual ZeGotinhaDataSet.pacientealergiaDataTable GetDataByIdPaciente(global::System.Nullable<long> idpaciente) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((idpaciente.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((long)(idpaciente.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             ZeGotinhaDataSet.pacientealergiaDataTable dataTable = new ZeGotinhaDataSet.pacientealergiaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -11407,12 +11449,18 @@ SELECT idpacientedoenca, iddoenca, datadoenca, datacura, idpaciente FROM pacient
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT idpacientedoenca, iddoenca, datadoenca, datacura, idpaciente FROM dbo.paci" +
                 "entedoenca";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT idpacientedoenca, iddoenca, datadoenca, datacura, idpaciente FROM dbo.paci" +
+                "entedoenca WHERE idpaciente = @idpaciente";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idpaciente", global::System.Data.SqlDbType.BigInt, 8, global::System.Data.ParameterDirection.Input, 0, 0, "idpaciente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11434,6 +11482,42 @@ SELECT idpacientedoenca, iddoenca, datadoenca, datacura, idpaciente FROM pacient
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual ZeGotinhaDataSet.pacientedoencaDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            ZeGotinhaDataSet.pacientedoencaDataTable dataTable = new ZeGotinhaDataSet.pacientedoencaDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByIdPaciente(ZeGotinhaDataSet.pacientedoencaDataTable dataTable, global::System.Nullable<long> idpaciente) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((idpaciente.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((long)(idpaciente.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual ZeGotinhaDataSet.pacientedoencaDataTable GetDataByIdPaciente(global::System.Nullable<long> idpaciente) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((idpaciente.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((long)(idpaciente.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             ZeGotinhaDataSet.pacientedoencaDataTable dataTable = new ZeGotinhaDataSet.pacientedoencaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -11777,11 +11861,17 @@ SELECT idpacientepeso, datapesagem, peso, idpaciente FROM pacientepeso WHERE (id
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT idpacientepeso, datapesagem, peso, idpaciente FROM dbo.pacientepeso";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT idpacientepeso, datapesagem, peso, idpaciente FROM dbo.pacientepeso WHERE " +
+                "idpaciente = @idpaciente";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idpaciente", global::System.Data.SqlDbType.BigInt, 8, global::System.Data.ParameterDirection.Input, 0, 0, "idpaciente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11803,6 +11893,32 @@ SELECT idpacientepeso, datapesagem, peso, idpaciente FROM pacientepeso WHERE (id
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual ZeGotinhaDataSet.pacientepesoDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            ZeGotinhaDataSet.pacientepesoDataTable dataTable = new ZeGotinhaDataSet.pacientepesoDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByIdPaciente(ZeGotinhaDataSet.pacientepesoDataTable dataTable, long idpaciente) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((long)(idpaciente));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual ZeGotinhaDataSet.pacientepesoDataTable GetDataByIdPaciente(long idpaciente) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((long)(idpaciente));
             ZeGotinhaDataSet.pacientepesoDataTable dataTable = new ZeGotinhaDataSet.pacientepesoDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -12101,12 +12217,18 @@ SELECT idpacientevacina, idposto, idpaciente, idvacina, datavacina, responsavel 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT idpacientevacina, idposto, idpaciente, idvacina, datavacina, responsavel F" +
                 "ROM dbo.pacientevacina";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT idpacientevacina, idposto, idpaciente, idvacina, datavacina, responsavel F" +
+                "ROM dbo.pacientevacina\r\nWHERE idpaciente = @idpaciente";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idpaciente", global::System.Data.SqlDbType.BigInt, 8, global::System.Data.ParameterDirection.Input, 0, 0, "idpaciente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12128,6 +12250,32 @@ SELECT idpacientevacina, idposto, idpaciente, idvacina, datavacina, responsavel 
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual ZeGotinhaDataSet.pacientevacinaDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            ZeGotinhaDataSet.pacientevacinaDataTable dataTable = new ZeGotinhaDataSet.pacientevacinaDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByIdPaciente(ZeGotinhaDataSet.pacientevacinaDataTable dataTable, long idpaciente) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((long)(idpaciente));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual ZeGotinhaDataSet.pacientevacinaDataTable GetDataByIdPaciente(long idpaciente) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((long)(idpaciente));
             ZeGotinhaDataSet.pacientevacinaDataTable dataTable = new ZeGotinhaDataSet.pacientevacinaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
