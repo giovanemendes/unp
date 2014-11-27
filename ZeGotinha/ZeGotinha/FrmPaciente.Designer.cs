@@ -46,6 +46,16 @@
             System.Windows.Forms.Label datadoencaLabel;
             System.Windows.Forms.Label datacuraLabel;
             System.Windows.Forms.Label idpacienteLabel2;
+            System.Windows.Forms.Label idpacientevacinaLabel;
+            System.Windows.Forms.Label idpostoLabel;
+            System.Windows.Forms.Label idpacienteLabel3;
+            System.Windows.Forms.Label idvacinaLabel;
+            System.Windows.Forms.Label datavacinaLabel;
+            System.Windows.Forms.Label responsavelLabel;
+            System.Windows.Forms.Label idpacientepesoLabel;
+            System.Windows.Forms.Label datapesagemLabel;
+            System.Windows.Forms.Label pesoLabel;
+            System.Windows.Forms.Label idpacienteLabel4;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPaciente));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -98,6 +108,7 @@
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pacientealergiaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.pacienteComboBox2 = new System.Windows.Forms.ComboBox();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem1 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem1 = new System.Windows.Forms.ToolStripLabel();
@@ -115,17 +126,16 @@
             this.datadiagnosticoMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.dataaltaMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.observacoesTextBox = new System.Windows.Forms.TextBox();
-            this.idpacienteTextBox1 = new System.Windows.Forms.TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.pacientedoencaDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pacientedoencaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.pacienteComboBox1 = new System.Windows.Forms.ComboBox();
             this.bindingNavigator2 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem2 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem2 = new System.Windows.Forms.ToolStripLabel();
@@ -145,14 +155,77 @@
             this.idpacientedoencaTextBox = new System.Windows.Forms.TextBox();
             this.datadoencaMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.datacuraMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
-            this.idpacienteTextBox2 = new System.Windows.Forms.TextBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.pacientevacinaDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pacientevacinaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.pacienteComboBox = new System.Windows.Forms.ComboBox();
+            this.vacinaComboBox = new System.Windows.Forms.ComboBox();
+            this.vacinaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.postoComboBox = new System.Windows.Forms.ComboBox();
+            this.postoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingNavigator3 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem3 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem3 = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem3 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveFirstItem3 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem3 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator9 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem3 = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorSeparator10 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem3 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem3 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator11 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorSaveItem3 = new System.Windows.Forms.ToolStripButton();
+            this.idpacientevacinaTextBox = new System.Windows.Forms.TextBox();
+            this.datavacinaMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.responsavelTextBox = new System.Windows.Forms.TextBox();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.pacientepesoDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pacientepesoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.datapesagemMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.bindingNavigator4 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem4 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem4 = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem4 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveFirstItem4 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem4 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator12 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem4 = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorSeparator13 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem4 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem4 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator14 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.pesoMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.pacienteComboBox3 = new System.Windows.Forms.ComboBox();
+            this.idpacientepesoTextBox = new System.Windows.Forms.TextBox();
+            this.pacienteBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.pacienteBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.pacienteBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.pacienteTableAdapter = new ZeGotinha.ZeGotinhaDataSetTableAdapters.pacienteTableAdapter();
             this.tableAdapterManager = new ZeGotinha.ZeGotinhaDataSetTableAdapters.TableAdapterManager();
             this.pacientealergiaTableAdapter = new ZeGotinha.ZeGotinhaDataSetTableAdapters.pacientealergiaTableAdapter();
             this.pacientedoencaTableAdapter = new ZeGotinha.ZeGotinhaDataSetTableAdapters.pacientedoencaTableAdapter();
+            this.pacientepesoTableAdapter = new ZeGotinha.ZeGotinhaDataSetTableAdapters.pacientepesoTableAdapter();
+            this.pacientevacinaTableAdapter = new ZeGotinha.ZeGotinhaDataSetTableAdapters.pacientevacinaTableAdapter();
             this.doencaTableAdapter = new ZeGotinha.ZeGotinhaDataSetTableAdapters.doencaTableAdapter();
+            this.postoTableAdapter = new ZeGotinha.ZeGotinhaDataSetTableAdapters.postoTableAdapter();
+            this.vacinaTableAdapter = new ZeGotinha.ZeGotinhaDataSetTableAdapters.vacinaTableAdapter();
+            this.pacienteBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             sexoLabel = new System.Windows.Forms.Label();
             idpacienteLabel = new System.Windows.Forms.Label();
             nomepacienteLabel = new System.Windows.Forms.Label();
@@ -170,6 +243,16 @@
             datadoencaLabel = new System.Windows.Forms.Label();
             datacuraLabel = new System.Windows.Forms.Label();
             idpacienteLabel2 = new System.Windows.Forms.Label();
+            idpacientevacinaLabel = new System.Windows.Forms.Label();
+            idpostoLabel = new System.Windows.Forms.Label();
+            idpacienteLabel3 = new System.Windows.Forms.Label();
+            idvacinaLabel = new System.Windows.Forms.Label();
+            datavacinaLabel = new System.Windows.Forms.Label();
+            responsavelLabel = new System.Windows.Forms.Label();
+            idpacientepesoLabel = new System.Windows.Forms.Label();
+            datapesagemLabel = new System.Windows.Forms.Label();
+            pesoLabel = new System.Windows.Forms.Label();
+            idpacienteLabel4 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -196,6 +279,26 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).BeginInit();
             this.bindingNavigator2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.doencaBindingSource)).BeginInit();
+            this.tabPage5.SuspendLayout();
+            this.groupBox8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pacientevacinaDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pacientevacinaBindingSource)).BeginInit();
+            this.groupBox7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.vacinaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.postoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator3)).BeginInit();
+            this.bindingNavigator3.SuspendLayout();
+            this.tabPage6.SuspendLayout();
+            this.groupBox10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pacientepesoDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pacientepesoBindingSource)).BeginInit();
+            this.groupBox9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator4)).BeginInit();
+            this.bindingNavigator4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pacienteBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pacienteBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pacienteBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pacienteBindingSource4)).BeginInit();
             this.SuspendLayout();
             // 
             // sexoLabel
@@ -347,9 +450,99 @@
             idpacienteLabel2.AutoSize = true;
             idpacienteLabel2.Location = new System.Drawing.Point(118, 22);
             idpacienteLabel2.Name = "idpacienteLabel2";
-            idpacienteLabel2.Size = new System.Drawing.Size(77, 13);
+            idpacienteLabel2.Size = new System.Drawing.Size(52, 13);
             idpacienteLabel2.TabIndex = 8;
-            idpacienteLabel2.Text = "Cód. Paciente:";
+            idpacienteLabel2.Text = "Paciente:";
+            // 
+            // idpacientevacinaLabel
+            // 
+            idpacientevacinaLabel.AutoSize = true;
+            idpacientevacinaLabel.Location = new System.Drawing.Point(18, 20);
+            idpacientevacinaLabel.Name = "idpacientevacinaLabel";
+            idpacientevacinaLabel.Size = new System.Drawing.Size(86, 13);
+            idpacientevacinaLabel.TabIndex = 0;
+            idpacientevacinaLabel.Text = "Cód. Vacinação:";
+            // 
+            // idpostoLabel
+            // 
+            idpostoLabel.AutoSize = true;
+            idpostoLabel.Location = new System.Drawing.Point(18, 63);
+            idpostoLabel.Name = "idpostoLabel";
+            idpostoLabel.Size = new System.Drawing.Size(127, 13);
+            idpostoLabel.TabIndex = 2;
+            idpostoLabel.Text = "Unidade de Atendimento:";
+            // 
+            // idpacienteLabel3
+            // 
+            idpacienteLabel3.AutoSize = true;
+            idpacienteLabel3.Location = new System.Drawing.Point(145, 20);
+            idpacienteLabel3.Name = "idpacienteLabel3";
+            idpacienteLabel3.Size = new System.Drawing.Size(52, 13);
+            idpacienteLabel3.TabIndex = 4;
+            idpacienteLabel3.Text = "Paciente:";
+            // 
+            // idvacinaLabel
+            // 
+            idvacinaLabel.AutoSize = true;
+            idvacinaLabel.Location = new System.Drawing.Point(272, 63);
+            idvacinaLabel.Name = "idvacinaLabel";
+            idvacinaLabel.Size = new System.Drawing.Size(43, 13);
+            idvacinaLabel.TabIndex = 6;
+            idvacinaLabel.Text = "Vacina:";
+            // 
+            // datavacinaLabel
+            // 
+            datavacinaLabel.AutoSize = true;
+            datavacinaLabel.Location = new System.Drawing.Point(22, 108);
+            datavacinaLabel.Name = "datavacinaLabel";
+            datavacinaLabel.Size = new System.Drawing.Size(69, 13);
+            datavacinaLabel.TabIndex = 8;
+            datavacinaLabel.Text = "Data Vacina:";
+            // 
+            // responsavelLabel
+            // 
+            responsavelLabel.AutoSize = true;
+            responsavelLabel.Location = new System.Drawing.Point(145, 108);
+            responsavelLabel.Name = "responsavelLabel";
+            responsavelLabel.Size = new System.Drawing.Size(72, 13);
+            responsavelLabel.TabIndex = 10;
+            responsavelLabel.Text = "Responsavel:";
+            // 
+            // idpacientepesoLabel
+            // 
+            idpacientepesoLabel.AutoSize = true;
+            idpacientepesoLabel.Location = new System.Drawing.Point(3, 25);
+            idpacientepesoLabel.Name = "idpacientepesoLabel";
+            idpacientepesoLabel.Size = new System.Drawing.Size(79, 13);
+            idpacientepesoLabel.TabIndex = 0;
+            idpacientepesoLabel.Text = "Cód. Pesagem:";
+            // 
+            // datapesagemLabel
+            // 
+            datapesagemLabel.AutoSize = true;
+            datapesagemLabel.Location = new System.Drawing.Point(3, 79);
+            datapesagemLabel.Name = "datapesagemLabel";
+            datapesagemLabel.Size = new System.Drawing.Size(80, 13);
+            datapesagemLabel.TabIndex = 2;
+            datapesagemLabel.Text = "Data Pesagem:";
+            // 
+            // pesoLabel
+            // 
+            pesoLabel.AutoSize = true;
+            pesoLabel.Location = new System.Drawing.Point(109, 79);
+            pesoLabel.Name = "pesoLabel";
+            pesoLabel.Size = new System.Drawing.Size(34, 13);
+            pesoLabel.TabIndex = 4;
+            pesoLabel.Text = "Peso:";
+            // 
+            // idpacienteLabel4
+            // 
+            idpacienteLabel4.AutoSize = true;
+            idpacienteLabel4.Location = new System.Drawing.Point(109, 25);
+            idpacienteLabel4.Name = "idpacienteLabel4";
+            idpacienteLabel4.Size = new System.Drawing.Size(77, 13);
+            idpacienteLabel4.TabIndex = 6;
+            idpacienteLabel4.Text = "Cód. Paciente:";
             // 
             // tabControl1
             // 
@@ -487,6 +680,7 @@
             // 
             this.pacienteBindingSource.DataMember = "paciente";
             this.pacienteBindingSource.DataSource = this.zeGotinhaDataSet;
+            this.pacienteBindingSource.CurrentItemChanged += new System.EventHandler(this.pacienteBindingSource_CurrentItemChanged);
             // 
             // zeGotinhaDataSet
             // 
@@ -762,9 +956,9 @@
             // 
             this.groupBox4.Controls.Add(this.pacientealergiaDataGridView);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox4.Location = new System.Drawing.Point(3, 130);
+            this.groupBox4.Location = new System.Drawing.Point(3, 139);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(511, 325);
+            this.groupBox4.Size = new System.Drawing.Size(511, 316);
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Diagnóstico Alérgico";
@@ -783,7 +977,7 @@
             this.pacientealergiaDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pacientealergiaDataGridView.Location = new System.Drawing.Point(3, 16);
             this.pacientealergiaDataGridView.Name = "pacientealergiaDataGridView";
-            this.pacientealergiaDataGridView.Size = new System.Drawing.Size(505, 306);
+            this.pacientealergiaDataGridView.Size = new System.Drawing.Size(505, 297);
             this.pacientealergiaDataGridView.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn13
@@ -823,6 +1017,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.pacienteComboBox2);
             this.groupBox3.Controls.Add(this.bindingNavigator1);
             this.groupBox3.Controls.Add(idpacientealergiaLabel);
             this.groupBox3.Controls.Add(this.idpacientealergiaTextBox);
@@ -833,14 +1028,25 @@
             this.groupBox3.Controls.Add(observacoesLabel);
             this.groupBox3.Controls.Add(this.observacoesTextBox);
             this.groupBox3.Controls.Add(idpacienteLabel1);
-            this.groupBox3.Controls.Add(this.idpacienteTextBox1);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox3.Location = new System.Drawing.Point(3, 3);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(511, 127);
+            this.groupBox3.Size = new System.Drawing.Size(511, 136);
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Dados Alergia";
+            // 
+            // pacienteComboBox2
+            // 
+            this.pacienteComboBox2.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.pacientealergiaBindingSource, "idpaciente", true));
+            this.pacienteComboBox2.DataSource = this.pacienteBindingSource;
+            this.pacienteComboBox2.DisplayMember = "nomepaciente";
+            this.pacienteComboBox2.FormattingEnabled = true;
+            this.pacienteComboBox2.Location = new System.Drawing.Point(283, 15);
+            this.pacienteComboBox2.Name = "pacienteComboBox2";
+            this.pacienteComboBox2.Size = new System.Drawing.Size(222, 21);
+            this.pacienteComboBox2.TabIndex = 11;
+            this.pacienteComboBox2.ValueMember = "idpaciente";
             // 
             // bindingNavigator1
             // 
@@ -862,7 +1068,7 @@
             this.bindingNavigatorAddNewItem1,
             this.bindingNavigatorDeleteItem1,
             this.bindingNavigatorSaveItem});
-            this.bindingNavigator1.Location = new System.Drawing.Point(3, 99);
+            this.bindingNavigator1.Location = new System.Drawing.Point(3, 108);
             this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem1;
             this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem1;
             this.bindingNavigator1.MoveNextItem = this.bindingNavigatorMoveNextItem1;
@@ -881,7 +1087,6 @@
             this.bindingNavigatorAddNewItem1.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem1.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem1.Text = "Add new";
-            this.bindingNavigatorAddNewItem1.Click += new System.EventHandler(this.bindingNavigatorAddNewItem1_Click);
             // 
             // bindingNavigatorCountItem1
             // 
@@ -1003,17 +1208,8 @@
             this.observacoesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pacientealergiaBindingSource, "observacoes", true));
             this.observacoesTextBox.Location = new System.Drawing.Point(103, 68);
             this.observacoesTextBox.Name = "observacoesTextBox";
-            this.observacoesTextBox.Size = new System.Drawing.Size(379, 20);
+            this.observacoesTextBox.Size = new System.Drawing.Size(402, 20);
             this.observacoesTextBox.TabIndex = 8;
-            // 
-            // idpacienteTextBox1
-            // 
-            this.idpacienteTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pacientealergiaBindingSource, "idpaciente", true));
-            this.idpacienteTextBox1.Enabled = false;
-            this.idpacienteTextBox1.Location = new System.Drawing.Point(283, 16);
-            this.idpacienteTextBox1.Name = "idpacienteTextBox1";
-            this.idpacienteTextBox1.Size = new System.Drawing.Size(100, 20);
-            this.idpacienteTextBox1.TabIndex = 10;
             // 
             // tabPage4
             // 
@@ -1032,9 +1228,9 @@
             // 
             this.groupBox6.Controls.Add(this.pacientedoencaDataGridView);
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox6.Location = new System.Drawing.Point(3, 151);
+            this.groupBox6.Location = new System.Drawing.Point(3, 157);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(511, 304);
+            this.groupBox6.Size = new System.Drawing.Size(511, 298);
             this.groupBox6.TabIndex = 1;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Diagnostico Doenças";
@@ -1044,7 +1240,6 @@
             this.pacientedoencaDataGridView.AutoGenerateColumns = false;
             this.pacientedoencaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.pacientedoencaDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn18,
             this.dataGridViewTextBoxColumn14,
             this.dataGridViewTextBoxColumn15,
             this.dataGridViewTextBoxColumn16,
@@ -1053,14 +1248,8 @@
             this.pacientedoencaDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pacientedoencaDataGridView.Location = new System.Drawing.Point(3, 16);
             this.pacientedoencaDataGridView.Name = "pacientedoencaDataGridView";
-            this.pacientedoencaDataGridView.Size = new System.Drawing.Size(505, 285);
+            this.pacientedoencaDataGridView.Size = new System.Drawing.Size(505, 279);
             this.pacientedoencaDataGridView.TabIndex = 0;
-            // 
-            // dataGridViewTextBoxColumn18
-            // 
-            this.dataGridViewTextBoxColumn18.DataPropertyName = "idpaciente";
-            this.dataGridViewTextBoxColumn18.HeaderText = "idpaciente";
-            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
             // 
             // dataGridViewTextBoxColumn14
             // 
@@ -1093,6 +1282,7 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.pacienteComboBox1);
             this.groupBox5.Controls.Add(this.bindingNavigator2);
             this.groupBox5.Controls.Add(this.label1);
             this.groupBox5.Controls.Add(this.doencaComboBox);
@@ -1103,14 +1293,26 @@
             this.groupBox5.Controls.Add(datacuraLabel);
             this.groupBox5.Controls.Add(this.datacuraMaskedTextBox);
             this.groupBox5.Controls.Add(idpacienteLabel2);
-            this.groupBox5.Controls.Add(this.idpacienteTextBox2);
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox5.Location = new System.Drawing.Point(3, 3);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(511, 148);
+            this.groupBox5.Size = new System.Drawing.Size(511, 149);
             this.groupBox5.TabIndex = 0;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Dados Doença";
+            // 
+            // pacienteComboBox1
+            // 
+            this.pacienteComboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.pacientedoencaBindingSource, "idpacientedoenca", true));
+            this.pacienteComboBox1.DataSource = this.pacienteBindingSource;
+            this.pacienteComboBox1.DisplayMember = "nomepaciente";
+            this.pacienteComboBox1.Enabled = false;
+            this.pacienteComboBox1.FormattingEnabled = true;
+            this.pacienteComboBox1.Location = new System.Drawing.Point(121, 37);
+            this.pacienteComboBox1.Name = "pacienteComboBox1";
+            this.pacienteComboBox1.Size = new System.Drawing.Size(384, 21);
+            this.pacienteComboBox1.TabIndex = 11;
+            this.pacienteComboBox1.ValueMember = "idpaciente";
             // 
             // bindingNavigator2
             // 
@@ -1132,7 +1334,7 @@
             this.bindingNavigatorAddNewItem2,
             this.bindingNavigatorDeleteItem2,
             this.bindingNavigatorSaveItem2});
-            this.bindingNavigator2.Location = new System.Drawing.Point(3, 120);
+            this.bindingNavigator2.Location = new System.Drawing.Point(3, 121);
             this.bindingNavigator2.MoveFirstItem = this.bindingNavigatorMoveFirstItem2;
             this.bindingNavigator2.MoveLastItem = this.bindingNavigatorMoveLastItem2;
             this.bindingNavigator2.MoveNextItem = this.bindingNavigatorMoveNextItem2;
@@ -1151,7 +1353,6 @@
             this.bindingNavigatorAddNewItem2.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem2.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem2.Text = "Add new";
-            this.bindingNavigatorAddNewItem2.Click += new System.EventHandler(this.bindingNavigatorAddNewItem2_Click);
             // 
             // bindingNavigatorCountItem2
             // 
@@ -1294,17 +1495,11 @@
             this.datacuraMaskedTextBox.TabIndex = 7;
             this.datacuraMaskedTextBox.ValidatingType = typeof(System.DateTime);
             // 
-            // idpacienteTextBox2
-            // 
-            this.idpacienteTextBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pacientedoencaBindingSource, "idpaciente", true));
-            this.idpacienteTextBox2.Enabled = false;
-            this.idpacienteTextBox2.Location = new System.Drawing.Point(121, 37);
-            this.idpacienteTextBox2.Name = "idpacienteTextBox2";
-            this.idpacienteTextBox2.Size = new System.Drawing.Size(100, 20);
-            this.idpacienteTextBox2.TabIndex = 9;
-            // 
             // tabPage5
             // 
+            this.tabPage5.AutoScroll = true;
+            this.tabPage5.Controls.Add(this.groupBox8);
+            this.tabPage5.Controls.Add(this.groupBox7);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
@@ -1313,8 +1508,304 @@
             this.tabPage5.Text = "Vacinas";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.pacientevacinaDataGridView);
+            this.groupBox8.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox8.Location = new System.Drawing.Point(3, 197);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(511, 258);
+            this.groupBox8.TabIndex = 1;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Histórico Vacinas ";
+            // 
+            // pacientevacinaDataGridView
+            // 
+            this.pacientevacinaDataGridView.AutoGenerateColumns = false;
+            this.pacientevacinaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.pacientevacinaDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn18,
+            this.dataGridViewTextBoxColumn19,
+            this.dataGridViewTextBoxColumn20,
+            this.dataGridViewTextBoxColumn21,
+            this.dataGridViewTextBoxColumn22,
+            this.dataGridViewTextBoxColumn23});
+            this.pacientevacinaDataGridView.DataSource = this.pacientevacinaBindingSource;
+            this.pacientevacinaDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pacientevacinaDataGridView.Location = new System.Drawing.Point(3, 16);
+            this.pacientevacinaDataGridView.Name = "pacientevacinaDataGridView";
+            this.pacientevacinaDataGridView.Size = new System.Drawing.Size(505, 239);
+            this.pacientevacinaDataGridView.TabIndex = 0;
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "idpacientevacina";
+            this.dataGridViewTextBoxColumn18.HeaderText = "idpacientevacina";
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.dataGridViewTextBoxColumn18.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            this.dataGridViewTextBoxColumn19.DataPropertyName = "idposto";
+            this.dataGridViewTextBoxColumn19.HeaderText = "idposto";
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            this.dataGridViewTextBoxColumn20.DataPropertyName = "idpaciente";
+            this.dataGridViewTextBoxColumn20.HeaderText = "idpaciente";
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            // 
+            // dataGridViewTextBoxColumn21
+            // 
+            this.dataGridViewTextBoxColumn21.DataPropertyName = "idvacina";
+            this.dataGridViewTextBoxColumn21.HeaderText = "idvacina";
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            // 
+            // dataGridViewTextBoxColumn22
+            // 
+            this.dataGridViewTextBoxColumn22.DataPropertyName = "datavacina";
+            this.dataGridViewTextBoxColumn22.HeaderText = "datavacina";
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            // 
+            // dataGridViewTextBoxColumn23
+            // 
+            this.dataGridViewTextBoxColumn23.DataPropertyName = "responsavel";
+            this.dataGridViewTextBoxColumn23.HeaderText = "responsavel";
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            // 
+            // pacientevacinaBindingSource
+            // 
+            this.pacientevacinaBindingSource.DataMember = "pacientevacina";
+            this.pacientevacinaBindingSource.DataSource = this.zeGotinhaDataSet;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.pacienteComboBox);
+            this.groupBox7.Controls.Add(this.vacinaComboBox);
+            this.groupBox7.Controls.Add(this.postoComboBox);
+            this.groupBox7.Controls.Add(this.bindingNavigator3);
+            this.groupBox7.Controls.Add(idpacientevacinaLabel);
+            this.groupBox7.Controls.Add(this.idpacientevacinaTextBox);
+            this.groupBox7.Controls.Add(idpostoLabel);
+            this.groupBox7.Controls.Add(idpacienteLabel3);
+            this.groupBox7.Controls.Add(idvacinaLabel);
+            this.groupBox7.Controls.Add(datavacinaLabel);
+            this.groupBox7.Controls.Add(this.datavacinaMaskedTextBox);
+            this.groupBox7.Controls.Add(responsavelLabel);
+            this.groupBox7.Controls.Add(this.responsavelTextBox);
+            this.groupBox7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox7.Location = new System.Drawing.Point(3, 3);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(511, 192);
+            this.groupBox7.TabIndex = 0;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Dados Vacina";
+            // 
+            // pacienteComboBox
+            // 
+            this.pacienteComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.pacientevacinaBindingSource, "idpaciente", true));
+            this.pacienteComboBox.DataSource = this.pacienteBindingSource;
+            this.pacienteComboBox.DisplayMember = "nomepaciente";
+            this.pacienteComboBox.FormattingEnabled = true;
+            this.pacienteComboBox.Location = new System.Drawing.Point(148, 36);
+            this.pacienteComboBox.Name = "pacienteComboBox";
+            this.pacienteComboBox.Size = new System.Drawing.Size(357, 21);
+            this.pacienteComboBox.TabIndex = 12;
+            this.pacienteComboBox.ValueMember = "idpaciente";
+            // 
+            // vacinaComboBox
+            // 
+            this.vacinaComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.pacientevacinaBindingSource, "idvacina", true));
+            this.vacinaComboBox.DataSource = this.vacinaBindingSource;
+            this.vacinaComboBox.DisplayMember = "nomevacina";
+            this.vacinaComboBox.FormattingEnabled = true;
+            this.vacinaComboBox.Location = new System.Drawing.Point(275, 79);
+            this.vacinaComboBox.Name = "vacinaComboBox";
+            this.vacinaComboBox.Size = new System.Drawing.Size(230, 21);
+            this.vacinaComboBox.TabIndex = 12;
+            this.vacinaComboBox.ValueMember = "idvacina";
+            // 
+            // vacinaBindingSource
+            // 
+            this.vacinaBindingSource.DataMember = "vacina";
+            this.vacinaBindingSource.DataSource = this.zeGotinhaDataSet;
+            // 
+            // postoComboBox
+            // 
+            this.postoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.pacientevacinaBindingSource, "idposto", true));
+            this.postoComboBox.DataSource = this.postoBindingSource;
+            this.postoComboBox.DisplayMember = "nomeposto";
+            this.postoComboBox.FormattingEnabled = true;
+            this.postoComboBox.Location = new System.Drawing.Point(21, 79);
+            this.postoComboBox.Name = "postoComboBox";
+            this.postoComboBox.Size = new System.Drawing.Size(248, 21);
+            this.postoComboBox.TabIndex = 12;
+            this.postoComboBox.ValueMember = "idposto";
+            // 
+            // postoBindingSource
+            // 
+            this.postoBindingSource.DataMember = "posto";
+            this.postoBindingSource.DataSource = this.zeGotinhaDataSet;
+            // 
+            // bindingNavigator3
+            // 
+            this.bindingNavigator3.AddNewItem = this.bindingNavigatorAddNewItem3;
+            this.bindingNavigator3.BindingSource = this.pacientevacinaBindingSource;
+            this.bindingNavigator3.CountItem = this.bindingNavigatorCountItem3;
+            this.bindingNavigator3.DeleteItem = this.bindingNavigatorDeleteItem3;
+            this.bindingNavigator3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.bindingNavigator3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem3,
+            this.bindingNavigatorMovePreviousItem3,
+            this.bindingNavigatorSeparator9,
+            this.bindingNavigatorPositionItem3,
+            this.bindingNavigatorCountItem3,
+            this.bindingNavigatorSeparator10,
+            this.bindingNavigatorMoveNextItem3,
+            this.bindingNavigatorMoveLastItem3,
+            this.bindingNavigatorSeparator11,
+            this.bindingNavigatorAddNewItem3,
+            this.bindingNavigatorDeleteItem3,
+            this.bindingNavigatorSaveItem3});
+            this.bindingNavigator3.Location = new System.Drawing.Point(3, 164);
+            this.bindingNavigator3.MoveFirstItem = this.bindingNavigatorMoveFirstItem3;
+            this.bindingNavigator3.MoveLastItem = this.bindingNavigatorMoveLastItem3;
+            this.bindingNavigator3.MoveNextItem = this.bindingNavigatorMoveNextItem3;
+            this.bindingNavigator3.MovePreviousItem = this.bindingNavigatorMovePreviousItem3;
+            this.bindingNavigator3.Name = "bindingNavigator3";
+            this.bindingNavigator3.PositionItem = this.bindingNavigatorPositionItem3;
+            this.bindingNavigator3.Size = new System.Drawing.Size(505, 25);
+            this.bindingNavigator3.TabIndex = 12;
+            this.bindingNavigator3.Text = "bindingNavigator3";
+            // 
+            // bindingNavigatorAddNewItem3
+            // 
+            this.bindingNavigatorAddNewItem3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem3.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem3.Image")));
+            this.bindingNavigatorAddNewItem3.Name = "bindingNavigatorAddNewItem3";
+            this.bindingNavigatorAddNewItem3.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem3.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem3.Text = "Add new";
+            // 
+            // bindingNavigatorCountItem3
+            // 
+            this.bindingNavigatorCountItem3.Name = "bindingNavigatorCountItem3";
+            this.bindingNavigatorCountItem3.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem3.Text = "of {0}";
+            this.bindingNavigatorCountItem3.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem3
+            // 
+            this.bindingNavigatorDeleteItem3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem3.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem3.Image")));
+            this.bindingNavigatorDeleteItem3.Name = "bindingNavigatorDeleteItem3";
+            this.bindingNavigatorDeleteItem3.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem3.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem3.Text = "Delete";
+            // 
+            // bindingNavigatorMoveFirstItem3
+            // 
+            this.bindingNavigatorMoveFirstItem3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem3.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem3.Image")));
+            this.bindingNavigatorMoveFirstItem3.Name = "bindingNavigatorMoveFirstItem3";
+            this.bindingNavigatorMoveFirstItem3.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem3.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem3.Text = "Move first";
+            // 
+            // bindingNavigatorMovePreviousItem3
+            // 
+            this.bindingNavigatorMovePreviousItem3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem3.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem3.Image")));
+            this.bindingNavigatorMovePreviousItem3.Name = "bindingNavigatorMovePreviousItem3";
+            this.bindingNavigatorMovePreviousItem3.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem3.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem3.Text = "Move previous";
+            // 
+            // bindingNavigatorSeparator9
+            // 
+            this.bindingNavigatorSeparator9.Name = "bindingNavigatorSeparator9";
+            this.bindingNavigatorSeparator9.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorPositionItem3
+            // 
+            this.bindingNavigatorPositionItem3.AccessibleName = "Position";
+            this.bindingNavigatorPositionItem3.AutoSize = false;
+            this.bindingNavigatorPositionItem3.Name = "bindingNavigatorPositionItem3";
+            this.bindingNavigatorPositionItem3.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem3.Text = "0";
+            this.bindingNavigatorPositionItem3.ToolTipText = "Current position";
+            // 
+            // bindingNavigatorSeparator10
+            // 
+            this.bindingNavigatorSeparator10.Name = "bindingNavigatorSeparator10";
+            this.bindingNavigatorSeparator10.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorMoveNextItem3
+            // 
+            this.bindingNavigatorMoveNextItem3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem3.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem3.Image")));
+            this.bindingNavigatorMoveNextItem3.Name = "bindingNavigatorMoveNextItem3";
+            this.bindingNavigatorMoveNextItem3.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem3.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem3.Text = "Move next";
+            // 
+            // bindingNavigatorMoveLastItem3
+            // 
+            this.bindingNavigatorMoveLastItem3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem3.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem3.Image")));
+            this.bindingNavigatorMoveLastItem3.Name = "bindingNavigatorMoveLastItem3";
+            this.bindingNavigatorMoveLastItem3.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem3.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem3.Text = "Move last";
+            // 
+            // bindingNavigatorSeparator11
+            // 
+            this.bindingNavigatorSeparator11.Name = "bindingNavigatorSeparator11";
+            this.bindingNavigatorSeparator11.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorSaveItem3
+            // 
+            this.bindingNavigatorSaveItem3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorSaveItem3.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorSaveItem3.Image")));
+            this.bindingNavigatorSaveItem3.Name = "bindingNavigatorSaveItem3";
+            this.bindingNavigatorSaveItem3.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorSaveItem3.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorSaveItem3.Text = "Save Data";
+            this.bindingNavigatorSaveItem3.Click += new System.EventHandler(this.bindingNavigatorSaveItem3_Click);
+            // 
+            // idpacientevacinaTextBox
+            // 
+            this.idpacientevacinaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pacientevacinaBindingSource, "idpacientevacina", true));
+            this.idpacientevacinaTextBox.Enabled = false;
+            this.idpacientevacinaTextBox.Location = new System.Drawing.Point(21, 36);
+            this.idpacientevacinaTextBox.Name = "idpacientevacinaTextBox";
+            this.idpacientevacinaTextBox.Size = new System.Drawing.Size(121, 20);
+            this.idpacientevacinaTextBox.TabIndex = 1;
+            // 
+            // datavacinaMaskedTextBox
+            // 
+            this.datavacinaMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pacientevacinaBindingSource, "datavacina", true));
+            this.datavacinaMaskedTextBox.Location = new System.Drawing.Point(21, 124);
+            this.datavacinaMaskedTextBox.Mask = "00/00/0000";
+            this.datavacinaMaskedTextBox.Name = "datavacinaMaskedTextBox";
+            this.datavacinaMaskedTextBox.Size = new System.Drawing.Size(121, 20);
+            this.datavacinaMaskedTextBox.TabIndex = 9;
+            this.datavacinaMaskedTextBox.ValidatingType = typeof(System.DateTime);
+            // 
+            // responsavelTextBox
+            // 
+            this.responsavelTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pacientevacinaBindingSource, "responsavel", true));
+            this.responsavelTextBox.Location = new System.Drawing.Point(148, 124);
+            this.responsavelTextBox.Name = "responsavelTextBox";
+            this.responsavelTextBox.Size = new System.Drawing.Size(357, 20);
+            this.responsavelTextBox.TabIndex = 11;
+            // 
             // tabPage6
             // 
+            this.tabPage6.AutoScroll = true;
+            this.tabPage6.Controls.Add(this.groupBox10);
+            this.tabPage6.Controls.Add(this.groupBox9);
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
@@ -1322,6 +1813,264 @@
             this.tabPage6.TabIndex = 3;
             this.tabPage6.Text = "Histórico Peso";
             this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.pacientepesoDataGridView);
+            this.groupBox10.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox10.Location = new System.Drawing.Point(3, 174);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(511, 281);
+            this.groupBox10.TabIndex = 1;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "Histórico Pesagem";
+            // 
+            // pacientepesoDataGridView
+            // 
+            this.pacientepesoDataGridView.AutoGenerateColumns = false;
+            this.pacientepesoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.pacientepesoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn24,
+            this.dataGridViewTextBoxColumn25,
+            this.dataGridViewTextBoxColumn26,
+            this.dataGridViewTextBoxColumn27});
+            this.pacientepesoDataGridView.DataSource = this.pacientepesoBindingSource;
+            this.pacientepesoDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pacientepesoDataGridView.Location = new System.Drawing.Point(3, 16);
+            this.pacientepesoDataGridView.Name = "pacientepesoDataGridView";
+            this.pacientepesoDataGridView.Size = new System.Drawing.Size(505, 262);
+            this.pacientepesoDataGridView.TabIndex = 0;
+            // 
+            // dataGridViewTextBoxColumn24
+            // 
+            this.dataGridViewTextBoxColumn24.DataPropertyName = "idpacientepeso";
+            this.dataGridViewTextBoxColumn24.HeaderText = "idpacientepeso";
+            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
+            this.dataGridViewTextBoxColumn24.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn25
+            // 
+            this.dataGridViewTextBoxColumn25.DataPropertyName = "datapesagem";
+            this.dataGridViewTextBoxColumn25.HeaderText = "datapesagem";
+            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
+            // 
+            // dataGridViewTextBoxColumn26
+            // 
+            this.dataGridViewTextBoxColumn26.DataPropertyName = "peso";
+            this.dataGridViewTextBoxColumn26.HeaderText = "peso";
+            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
+            // 
+            // dataGridViewTextBoxColumn27
+            // 
+            this.dataGridViewTextBoxColumn27.DataPropertyName = "idpaciente";
+            this.dataGridViewTextBoxColumn27.HeaderText = "idpaciente";
+            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
+            // 
+            // pacientepesoBindingSource
+            // 
+            this.pacientepesoBindingSource.DataMember = "pacientepeso";
+            this.pacientepesoBindingSource.DataSource = this.zeGotinhaDataSet;
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.datapesagemMaskedTextBox);
+            this.groupBox9.Controls.Add(this.bindingNavigator4);
+            this.groupBox9.Controls.Add(this.pesoMaskedTextBox);
+            this.groupBox9.Controls.Add(this.pacienteComboBox3);
+            this.groupBox9.Controls.Add(idpacientepesoLabel);
+            this.groupBox9.Controls.Add(this.idpacientepesoTextBox);
+            this.groupBox9.Controls.Add(datapesagemLabel);
+            this.groupBox9.Controls.Add(pesoLabel);
+            this.groupBox9.Controls.Add(idpacienteLabel4);
+            this.groupBox9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox9.Location = new System.Drawing.Point(3, 3);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(511, 165);
+            this.groupBox9.TabIndex = 0;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Dados Pesagem ";
+            // 
+            // datapesagemMaskedTextBox
+            // 
+            this.datapesagemMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pacientepesoBindingSource, "datapesagem", true));
+            this.datapesagemMaskedTextBox.Location = new System.Drawing.Point(6, 95);
+            this.datapesagemMaskedTextBox.Mask = "00/00/0000";
+            this.datapesagemMaskedTextBox.Name = "datapesagemMaskedTextBox";
+            this.datapesagemMaskedTextBox.Size = new System.Drawing.Size(100, 20);
+            this.datapesagemMaskedTextBox.TabIndex = 10;
+            this.datapesagemMaskedTextBox.ValidatingType = typeof(System.DateTime);
+            // 
+            // bindingNavigator4
+            // 
+            this.bindingNavigator4.AddNewItem = this.bindingNavigatorAddNewItem4;
+            this.bindingNavigator4.BindingSource = this.pacientepesoBindingSource;
+            this.bindingNavigator4.CountItem = this.bindingNavigatorCountItem4;
+            this.bindingNavigator4.DeleteItem = this.bindingNavigatorDeleteItem4;
+            this.bindingNavigator4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.bindingNavigator4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem4,
+            this.bindingNavigatorMovePreviousItem4,
+            this.bindingNavigatorSeparator12,
+            this.bindingNavigatorPositionItem4,
+            this.bindingNavigatorCountItem4,
+            this.bindingNavigatorSeparator13,
+            this.bindingNavigatorMoveNextItem4,
+            this.bindingNavigatorMoveLastItem4,
+            this.bindingNavigatorSeparator14,
+            this.bindingNavigatorAddNewItem4,
+            this.bindingNavigatorDeleteItem4,
+            this.toolStripButton2});
+            this.bindingNavigator4.Location = new System.Drawing.Point(3, 137);
+            this.bindingNavigator4.MoveFirstItem = this.bindingNavigatorMoveFirstItem4;
+            this.bindingNavigator4.MoveLastItem = this.bindingNavigatorMoveLastItem4;
+            this.bindingNavigator4.MoveNextItem = this.bindingNavigatorMoveNextItem4;
+            this.bindingNavigator4.MovePreviousItem = this.bindingNavigatorMovePreviousItem4;
+            this.bindingNavigator4.Name = "bindingNavigator4";
+            this.bindingNavigator4.PositionItem = this.bindingNavigatorPositionItem4;
+            this.bindingNavigator4.Size = new System.Drawing.Size(505, 25);
+            this.bindingNavigator4.TabIndex = 9;
+            this.bindingNavigator4.Text = "bindingNavigator4";
+            // 
+            // bindingNavigatorAddNewItem4
+            // 
+            this.bindingNavigatorAddNewItem4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem4.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem4.Image")));
+            this.bindingNavigatorAddNewItem4.Name = "bindingNavigatorAddNewItem4";
+            this.bindingNavigatorAddNewItem4.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem4.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem4.Text = "Add new";
+            // 
+            // bindingNavigatorCountItem4
+            // 
+            this.bindingNavigatorCountItem4.Name = "bindingNavigatorCountItem4";
+            this.bindingNavigatorCountItem4.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem4.Text = "of {0}";
+            this.bindingNavigatorCountItem4.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem4
+            // 
+            this.bindingNavigatorDeleteItem4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem4.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem4.Image")));
+            this.bindingNavigatorDeleteItem4.Name = "bindingNavigatorDeleteItem4";
+            this.bindingNavigatorDeleteItem4.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem4.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem4.Text = "Delete";
+            // 
+            // bindingNavigatorMoveFirstItem4
+            // 
+            this.bindingNavigatorMoveFirstItem4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem4.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem4.Image")));
+            this.bindingNavigatorMoveFirstItem4.Name = "bindingNavigatorMoveFirstItem4";
+            this.bindingNavigatorMoveFirstItem4.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem4.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem4.Text = "Move first";
+            // 
+            // bindingNavigatorMovePreviousItem4
+            // 
+            this.bindingNavigatorMovePreviousItem4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem4.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem4.Image")));
+            this.bindingNavigatorMovePreviousItem4.Name = "bindingNavigatorMovePreviousItem4";
+            this.bindingNavigatorMovePreviousItem4.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem4.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem4.Text = "Move previous";
+            // 
+            // bindingNavigatorSeparator12
+            // 
+            this.bindingNavigatorSeparator12.Name = "bindingNavigatorSeparator12";
+            this.bindingNavigatorSeparator12.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorPositionItem4
+            // 
+            this.bindingNavigatorPositionItem4.AccessibleName = "Position";
+            this.bindingNavigatorPositionItem4.AutoSize = false;
+            this.bindingNavigatorPositionItem4.Name = "bindingNavigatorPositionItem4";
+            this.bindingNavigatorPositionItem4.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem4.Text = "0";
+            this.bindingNavigatorPositionItem4.ToolTipText = "Current position";
+            // 
+            // bindingNavigatorSeparator13
+            // 
+            this.bindingNavigatorSeparator13.Name = "bindingNavigatorSeparator13";
+            this.bindingNavigatorSeparator13.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorMoveNextItem4
+            // 
+            this.bindingNavigatorMoveNextItem4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem4.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem4.Image")));
+            this.bindingNavigatorMoveNextItem4.Name = "bindingNavigatorMoveNextItem4";
+            this.bindingNavigatorMoveNextItem4.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem4.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem4.Text = "Move next";
+            // 
+            // bindingNavigatorMoveLastItem4
+            // 
+            this.bindingNavigatorMoveLastItem4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem4.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem4.Image")));
+            this.bindingNavigatorMoveLastItem4.Name = "bindingNavigatorMoveLastItem4";
+            this.bindingNavigatorMoveLastItem4.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem4.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem4.Text = "Move last";
+            // 
+            // bindingNavigatorSeparator14
+            // 
+            this.bindingNavigatorSeparator14.Name = "bindingNavigatorSeparator14";
+            this.bindingNavigatorSeparator14.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton2.Text = "Save Data";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            // 
+            // pesoMaskedTextBox
+            // 
+            this.pesoMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pacientepesoBindingSource, "peso", true));
+            this.pesoMaskedTextBox.Location = new System.Drawing.Point(112, 95);
+            this.pesoMaskedTextBox.Mask = "999.00";
+            this.pesoMaskedTextBox.Name = "pesoMaskedTextBox";
+            this.pesoMaskedTextBox.Size = new System.Drawing.Size(74, 20);
+            this.pesoMaskedTextBox.TabIndex = 8;
+            this.pesoMaskedTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // pacienteComboBox3
+            // 
+            this.pacienteComboBox3.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.pacientepesoBindingSource, "idpaciente", true));
+            this.pacienteComboBox3.DataSource = this.pacienteBindingSource;
+            this.pacienteComboBox3.DisplayMember = "nomepaciente";
+            this.pacienteComboBox3.FormattingEnabled = true;
+            this.pacienteComboBox3.Location = new System.Drawing.Point(112, 40);
+            this.pacienteComboBox3.Name = "pacienteComboBox3";
+            this.pacienteComboBox3.Size = new System.Drawing.Size(393, 21);
+            this.pacienteComboBox3.TabIndex = 7;
+            this.pacienteComboBox3.ValueMember = "idpaciente";
+            // 
+            // idpacientepesoTextBox
+            // 
+            this.idpacientepesoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pacientepesoBindingSource, "idpacientepeso", true));
+            this.idpacientepesoTextBox.Enabled = false;
+            this.idpacientepesoTextBox.Location = new System.Drawing.Point(6, 41);
+            this.idpacientepesoTextBox.Name = "idpacientepesoTextBox";
+            this.idpacientepesoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.idpacientepesoTextBox.TabIndex = 1;
+            // 
+            // pacienteBindingSource3
+            // 
+            this.pacienteBindingSource3.DataMember = "paciente";
+            this.pacienteBindingSource3.DataSource = this.zeGotinhaDataSet;
+            // 
+            // pacienteBindingSource2
+            // 
+            this.pacienteBindingSource2.DataMember = "paciente";
+            this.pacienteBindingSource2.DataSource = this.zeGotinhaDataSet;
+            // 
+            // pacienteBindingSource1
+            // 
+            this.pacienteBindingSource1.DataMember = "paciente";
+            this.pacienteBindingSource1.DataSource = this.zeGotinhaDataSet;
             // 
             // pacienteTableAdapter
             // 
@@ -1338,9 +2087,9 @@
             this.tableAdapterManager.medicoTableAdapter = null;
             this.tableAdapterManager.pacientealergiaTableAdapter = this.pacientealergiaTableAdapter;
             this.tableAdapterManager.pacientedoencaTableAdapter = this.pacientedoencaTableAdapter;
-            this.tableAdapterManager.pacientepesoTableAdapter = null;
+            this.tableAdapterManager.pacientepesoTableAdapter = this.pacientepesoTableAdapter;
             this.tableAdapterManager.pacienteTableAdapter = this.pacienteTableAdapter;
-            this.tableAdapterManager.pacientevacinaTableAdapter = null;
+            this.tableAdapterManager.pacientevacinaTableAdapter = this.pacientevacinaTableAdapter;
             this.tableAdapterManager.posologiaTableAdapter = null;
             this.tableAdapterManager.postoTableAdapter = null;
             this.tableAdapterManager.principioativoTableAdapter = null;
@@ -1357,9 +2106,30 @@
             // 
             this.pacientedoencaTableAdapter.ClearBeforeFill = true;
             // 
+            // pacientepesoTableAdapter
+            // 
+            this.pacientepesoTableAdapter.ClearBeforeFill = true;
+            // 
+            // pacientevacinaTableAdapter
+            // 
+            this.pacientevacinaTableAdapter.ClearBeforeFill = true;
+            // 
             // doencaTableAdapter
             // 
             this.doencaTableAdapter.ClearBeforeFill = true;
+            // 
+            // postoTableAdapter
+            // 
+            this.postoTableAdapter.ClearBeforeFill = true;
+            // 
+            // vacinaTableAdapter
+            // 
+            this.vacinaTableAdapter.ClearBeforeFill = true;
+            // 
+            // pacienteBindingSource4
+            // 
+            this.pacienteBindingSource4.DataMember = "paciente";
+            this.pacienteBindingSource4.DataSource = this.zeGotinhaDataSet;
             // 
             // FrmPaciente
             // 
@@ -1406,6 +2176,30 @@
             this.bindingNavigator2.ResumeLayout(false);
             this.bindingNavigator2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.doencaBindingSource)).EndInit();
+            this.tabPage5.ResumeLayout(false);
+            this.groupBox8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pacientevacinaDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pacientevacinaBindingSource)).EndInit();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.vacinaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.postoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator3)).EndInit();
+            this.bindingNavigator3.ResumeLayout(false);
+            this.bindingNavigator3.PerformLayout();
+            this.tabPage6.ResumeLayout(false);
+            this.groupBox10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pacientepesoDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pacientepesoBindingSource)).EndInit();
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator4)).EndInit();
+            this.bindingNavigator4.ResumeLayout(false);
+            this.bindingNavigator4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pacienteBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pacienteBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pacienteBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pacienteBindingSource4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1437,7 +2231,6 @@
         private System.Windows.Forms.MaskedTextBox datadiagnosticoMaskedTextBox;
         private System.Windows.Forms.MaskedTextBox dataaltaMaskedTextBox;
         private System.Windows.Forms.TextBox observacoesTextBox;
-        private System.Windows.Forms.TextBox idpacienteTextBox1;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.TabPage tabPage6;
@@ -1492,15 +2285,9 @@
         private System.Windows.Forms.BindingSource pacientedoencaBindingSource;
         private ZeGotinhaDataSetTableAdapters.pacientedoencaTableAdapter pacientedoencaTableAdapter;
         private System.Windows.Forms.DataGridView pacientedoencaDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
         private System.Windows.Forms.TextBox idpacientedoencaTextBox;
         private System.Windows.Forms.MaskedTextBox datadoencaMaskedTextBox;
         private System.Windows.Forms.MaskedTextBox datacuraMaskedTextBox;
-        private System.Windows.Forms.TextBox idpacienteTextBox2;
         private System.Windows.Forms.BindingSource doencaBindingSource;
         private ZeGotinhaDataSetTableAdapters.doencaTableAdapter doencaTableAdapter;
         private System.Windows.Forms.Label label1;
@@ -1518,5 +2305,75 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem2;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator8;
         private System.Windows.Forms.ToolStripButton bindingNavigatorSaveItem2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.BindingSource pacientevacinaBindingSource;
+        private ZeGotinhaDataSetTableAdapters.pacientevacinaTableAdapter pacientevacinaTableAdapter;
+        private System.Windows.Forms.DataGridView pacientevacinaDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
+        private System.Windows.Forms.BindingNavigator bindingNavigator3;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem3;
+        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem3;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem3;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem3;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem3;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator9;
+        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem3;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator10;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem3;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem3;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator11;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorSaveItem3;
+        private System.Windows.Forms.TextBox idpacientevacinaTextBox;
+        private System.Windows.Forms.MaskedTextBox datavacinaMaskedTextBox;
+        private System.Windows.Forms.TextBox responsavelTextBox;
+        private System.Windows.Forms.BindingSource postoBindingSource;
+        private ZeGotinhaDataSetTableAdapters.postoTableAdapter postoTableAdapter;
+        private System.Windows.Forms.ComboBox postoComboBox;
+        private System.Windows.Forms.BindingSource vacinaBindingSource;
+        private ZeGotinhaDataSetTableAdapters.vacinaTableAdapter vacinaTableAdapter;
+        private System.Windows.Forms.ComboBox pacienteComboBox;
+        private System.Windows.Forms.BindingSource pacienteBindingSource1;
+        private System.Windows.Forms.ComboBox vacinaComboBox;
+        private System.Windows.Forms.ComboBox pacienteComboBox2;
+        private System.Windows.Forms.BindingSource pacienteBindingSource3;
+        private System.Windows.Forms.ComboBox pacienteComboBox1;
+        private System.Windows.Forms.BindingSource pacienteBindingSource2;
+        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.BindingSource pacientepesoBindingSource;
+        private ZeGotinhaDataSetTableAdapters.pacientepesoTableAdapter pacientepesoTableAdapter;
+        private System.Windows.Forms.DataGridView pacientepesoDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
+        private System.Windows.Forms.BindingNavigator bindingNavigator4;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem4;
+        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem4;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem4;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem4;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem4;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator12;
+        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem4;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator13;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem4;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem4;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator14;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.MaskedTextBox pesoMaskedTextBox;
+        private System.Windows.Forms.ComboBox pacienteComboBox3;
+        private System.Windows.Forms.TextBox idpacientepesoTextBox;
+        private System.Windows.Forms.BindingSource pacienteBindingSource4;
+        private System.Windows.Forms.MaskedTextBox datapesagemMaskedTextBox;
     }
 }

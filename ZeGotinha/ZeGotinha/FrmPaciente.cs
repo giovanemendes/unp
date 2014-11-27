@@ -27,6 +27,14 @@ namespace ZeGotinha
 
         private void FrmPaciente_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'zeGotinhaDataSet.pacientepeso' table. You can move, or remove it, as needed.
+            this.pacientepesoTableAdapter.Fill(this.zeGotinhaDataSet.pacientepeso);
+            // TODO: This line of code loads data into the 'zeGotinhaDataSet.vacina' table. You can move, or remove it, as needed.
+            this.vacinaTableAdapter.Fill(this.zeGotinhaDataSet.vacina);
+            // TODO: This line of code loads data into the 'zeGotinhaDataSet.posto' table. You can move, or remove it, as needed.
+            this.postoTableAdapter.Fill(this.zeGotinhaDataSet.posto);
+            // TODO: This line of code loads data into the 'zeGotinhaDataSet.pacientevacina' table. You can move, or remove it, as needed.
+            this.pacientevacinaTableAdapter.Fill(this.zeGotinhaDataSet.pacientevacina);
             // TODO: This line of code loads data into the 'zeGotinhaDataSet.doenca' table. You can move, or remove it, as needed.
             this.doencaTableAdapter.Fill(this.zeGotinhaDataSet.doenca);
             // TODO: This line of code loads data into the 'zeGotinhaDataSet.pacientedoenca' table. You can move, or remove it, as needed.
@@ -61,11 +69,6 @@ namespace ZeGotinha
             this.comboBoxTipoPesquisa.SelectedIndex = 0;
         }
 
-        private void toolStripButton7_Click(object sender, EventArgs e)
-        {
-            this.idpacienteTextBox1.Text = idpacienteTextBox.Text;
-        }
-
         private void pacienteBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
         {
             this.Validate();
@@ -81,21 +84,32 @@ namespace ZeGotinha
             this.tableAdapterManager.UpdateAll(this.zeGotinhaDataSet);
         }
 
-        private void bindingNavigatorAddNewItem1_Click(object sender, EventArgs e)
-        {
-            this.idpacienteTextBox1.Text = this.idpacienteTextBox.Text;
-        }
-
-        private void bindingNavigatorAddNewItem2_Click(object sender, EventArgs e)
-        {
-            this.idpacienteTextBox2.Text = this.idpacienteTextBox.Text;
-        }
-
         private void bindingNavigatorSaveItem2_Click(object sender, EventArgs e)
         {
             this.Validate();
             this.pacientedoencaBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.zeGotinhaDataSet);
+        }
+
+        private void bindingNavigatorSaveItem3_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.pacientevacinaBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.zeGotinhaDataSet);
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.pacientepesoBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.zeGotinhaDataSet);
+        }
+
+        private void pacienteBindingSource_CurrentItemChanged(object sender, EventArgs e)
+        {
+            // MessageBox.Show("item alterado");
+            // alterar as referencias do paciente nas outras telas
+            
         }
     }
 }
