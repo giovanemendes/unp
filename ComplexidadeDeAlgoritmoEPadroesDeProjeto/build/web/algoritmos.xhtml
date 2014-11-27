@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Algoritmos de soluções em grafos</title>
+    </h:head>
+    <h:body style="background-color: activecaption">
+
+        <p:layout style="min-width:400px; min-height:400px;">
+
+            <!-- Inicio do menu -->
+            <p:layoutUnit position="west" resizable="true" size="165" maxSize="200">
+
+                <h:panelGrid columns="1" cellspacing="5">
+                    <h:form>
+                        <p:commandButton action="#" value="Algoritmos" icon="ui-icon-wrench" style="width: 138px" />
+                        <br /><br />
+                        <p:commandButton  action="grafoslist" value="Grafos" icon="ui-icon-image" style="width: 138px" ajax="false" />
+                        <br /><br />
+                        <p:commandButton action="index" value="Sobre" icon="ui-icon-notice" style="width: 138px" ajax="false"  />
+                    </h:form>
+                </h:panelGrid>
+
+            </p:layoutUnit> <!-- Fim do menu -->
+
+            <!-- Inicio do conteudo centralizado -->
+            <p:layoutUnit position="center">
+                <h:form>
+                    
+                    <h:panelGrid columns="7" cellpadding="8" style="padding-bottom: 15px;" >
+
+                        <p:outputLabel for="origem" value="Origem: " />
+                        <p:inputText id="origem" value="#{calculosMBean.origem}" size="3" required="true" />
+
+                        <p:outputLabel for="grafo" value="Grafo: " />
+                        <p:selectOneMenu id="grafo" value="#{calculosMBean.grafo}" >
+                            <f:selectItems value="#{calculosMBean.grafos}" />
+                        </p:selectOneMenu>
+
+                        <p:outputLabel for="algoritmo" value="Algoritmo: " />
+                        <p:selectOneMenu id="algoritmo" value="#{calculosMBean.algoritmo}" >
+                            <f:selectItems value="#{calculosMBean.algoritmos}" />
+                        </p:selectOneMenu>
+
+                        <p:commandButton value="Obter" action="#{calculosMBean.obterResultado}" ajax="false" />
+                    </h:panelGrid>
+
+                    <!-- Resultado: mostra grafo e o texto detalhado do algoritmo especifico para aquele grafo -->
+                    <p:fieldset legend="Basic" style="margin-bottom:20px" rendered="#{calculosMBean.mostrarResultado}" >
+                        <h:panelGrid columns="2" cellpadding="5">
+                            <p:graphicImage name="image/#{calculosMBean.imagem}" width="400px" />
+                            <p:inputTextarea  value="#{calculosMBean.resposta}" readonly="true" cols="65" rows="#{calculosMBean.linhasExibidas}" />
+                        </h:panelGrid>
+                    </p:fieldset>
+
+                </h:form>
+            </p:layoutUnit> <!-- Fim do conteúdo centralizado -->
+
+        </p:layout>
+    </h:body>
+</html>
+
